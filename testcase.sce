@@ -1,6 +1,6 @@
 exec builder.sce
 exec loader.sce
-cd macros
+//cd macros
 //getd .
 
 test_pass=[]
