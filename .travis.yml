@@ -4,5 +4,5 @@ before_install:
  - sudo apt-get install scilab
 
 script:
- - scilab -nw -f test.sce
+ - scilab -nw -f testcase.sce
 
