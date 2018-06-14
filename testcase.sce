@@ -1,4 +1,7 @@
-//getd .
+exec builder.sce
+exec loader.sce
+cd macro/
+getd .
 
 test_pass=[]
 res=[]
