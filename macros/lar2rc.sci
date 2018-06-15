@@ -9,7 +9,7 @@ function k=lar2rc(g)
 
 // Example
 //g = [0.6389 4.5989 0.0063 0.0163 -0.0163];
-// k = lar2rc(g)
+//k = lar2rc(g)
 
 // Output  :
 //k  =

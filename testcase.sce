@@ -12,10 +12,10 @@ res=[]
 fir = isfir([1 -1 1], 1)
 
 if(fir == 1)
-           test_pass=[test_pass,1]
+    test_pass=[test_pass,1]
 else
-	test_pass=[test_pass,0]
-	disp("isfir test failed")
+    test_pass=[test_pass,0]
+    disp("isfir test failed")
 end
 
 /////////////////////////////////////////////
@@ -26,88 +26,72 @@ end
 flag = islinphase([0 1 2 2 1 0],1)
 
 if(flag == 1)
-           test_pass=[test_pass,1]
+    test_pass=[test_pass,1]
 else
-	test_pass=[test_pass,0]
-	disp("islinearphase Test failed")
+    test_pass=[test_pass,0]
+    disp("islinearphase Test failed")
 end
 
 
-///////////////////////////////////////////////
-//
-//
-///////////Test case for       3) arithdeco                  //////////
-//
-//seq=[1 3 2 1]
-//counts=[5 2 1]
-//len=4
-//code = arithenco(seq,counts)
-//
-//dseq = arithdeco(code,counts,length(seq));
-//
-//if(dseq==[1 3 2 1])
-//           test_pass=[test_pass,1]
-//    else
-//	test_pass=[test_pass,0]
-//	disp("Arithdeco Test failed")
-//end
-//
-//
-//
-///////////////////////////////////////////////
-//
-//
-///////////Test case for       4) FInddelay                  //////////
-//
-//x=[1 2 3 4 5 6]
-//y=[5 6]
-//
-//D1 = finddelay(x,y,5)
-//D2 = finddelay(x,y,3)
-//
-//
-//if(D1==-4 & D2==-3)
-//           test_pass=[test_pass,1]
-//    else
-//	test_pass=[test_pass,0]
-//	disp("Finddelay Test failed")
-//end
-//
-///////////////////////////////////////////////
-//
-//
-///////////Test case for       5) Gfcosets                  //////////
-//
-//a=2;
-//b=3;
-//
-//c = gfcosets(a,b)
-//
-//if(c(:,1)==[0;1;2;4;5] & c(2,2)==3 & c(3,2)==6 & c(5,2)==7 & isnan(c(1,2)) & isnan(c(4,2)))
-//           test_pass=[test_pass,1]
-//    else
-//	test_pass=[test_pass,0]
-//	disp("gfcosets Test failed")
-//end
-//
-///////////////////////////////////////////////
-//
-//
-///////////Test case for       6) Gflineq                  //////////
-//
-//A = [2 0 1;1 1 0;1 1 2]
-//b=[1;0;0]
-//p=3
-//
-//[x,vld] = gflineq(A,b,p)
-//
-//
-//if(vld==1 & x==[2;1;0])
-//           test_pass=[test_pass,1]
-//    else
-//	test_pass=[test_pass,0]
-//	disp("Gflineq Test failed")
-//end
+/////////////////////////////////////////////
+
+
+/////////Test case for       30) ismaxphase                  //////////
+
+flag = ismaxphase([1 -5 6],1)
+
+if(flag == 1)
+    test_pass=[test_pass,1]
+else
+    test_pass=[test_pass,0]
+    disp("ismaxphase Test failed")
+end
+
+
+
+/////////////////////////////////////////////
+
+
+/////////Test case for       31) isminphase                  //////////
+flag = isminphase([1 -0.3 0.02],1)
+
+if(flag == 1)
+    test_pass=[test_pass,1]
+else
+    test_pass=[test_pass,0]
+    disp("isminphase Test failed")
+end
+
+/////////////////////////////////////////////
+
+
+/////////Test case for       32) isstable                  //////////
+
+flag = isstable([1 2],[1 -0.7 0.1])
+
+if(flag == 1)
+    test_pass=[test_pass,1]
+else
+    test_pass=[test_pass,0]
+    disp("isstable Test failed")
+end
+
+/////////////////////////////////////////////
+
+
+/////////Test case for       33)lar2rc                  //////////
+
+g = [0.6389 4.5989 0.0063 0.0163 -0.0163];
+k = lar2rc(g)
+
+k=round(k*10000)/10000
+
+if(k == [0.3090    0.9801    0.0031    0.0081  -0.0081])
+    test_pass=[test_pass,1]
+else
+    test_pass=[test_pass,0]
+    disp("lar2rc Test failed")
+end
 //
 ///////////////////////////////////////////////
 //
@@ -301,9 +285,9 @@ end
 res=find(test_pass==0)
 
 if(res~=[])
-	disp("One or more tests failed")
-	exit(1)
+    disp("One or more tests failed")
+    exit(1)
 else
-    disp("pass")
-	exit
+    disp("All test cases passed")
+    exit
 end
