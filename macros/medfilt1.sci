@@ -43,14 +43,25 @@ function y = medfilt1(x, varargin)
     //      The filtered signal.
     //      y has the same size as x
     //
-    // Examples
-    // 1) Noise supression using median filtering
-    //      fs = 1e3;
-    //      t =  1:1/fs:1;
-    //      s = sin(2*%pi*2*t)+ cos(2*%pi*5*t);
-    //      // Adding noise
-    //      x = s + 0.1*randn(size(s));
-    //      y = medfilt1(x);
+
+    // Examples : Noise supression using 10th order (n =10) median filtering
+    
+    ////Generate a sinusoidal signal sampled for 1 second at 100 Hz. Add a higher-frequency sinusoid to simulate noise. 
+    //fs = 100;
+    //t = 0:1/fs:1;
+    //x = sin(2*%pi*t*3)+0.25*sin(2*%pi*t*40);
+    //
+    ////Use a 10th-order median filter to smooth the signal. Plot the result.
+    //y = medfilt1(x,10);
+    //plot(t,x,t,y)
+    //legend('Original','Filtered');
+    //y = round(y*10000)/10000;
+    //y = y'
+    
+    //Output :
+    // Output is a plot of x versus t and y versus t
+    // samples of y is stored in medfilt1op.txt
+    
     //
     // See also
     // filter | hampel | median | sgolayfilt
@@ -218,7 +229,7 @@ function med = medfilt_colvector(x, n, zeropadflag, nanflag)
     // nanflag -> discard all blocks containing nan, else do not consider nan values
     
     med = zeros(size(x,1),1);
-    disp('here1');
+    //disp('here1');
     
     
     // ** zero pad the signal **
@@ -247,7 +258,7 @@ function med = medfilt_colvector(x, n, zeropadflag, nanflag)
         nanpresent = or(isnan(blocks), 1);
         med(nanpresent) = %nan;
     else
-        disp('here3');
+        //disp('here3');
         // we have to neglect nans
         sorted_blocks = gsort(blocks, 'r', 'i');
         

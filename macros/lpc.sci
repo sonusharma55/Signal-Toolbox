@@ -29,11 +29,29 @@ function [a,g] = lpc(x,varargin)
     //
     //
     // Examples
-    // 1) 
-    //      noise = randn(20000,1);
-    //      x = filter(1,[1 1/5 1/3 1/4],noise);
-    //      x = x(15904:20000);
-    //      [a,g] = lpc(x,3);
+    //noise = rand(50000,1,"normal");
+    //x = filter(1,[1 1/2 1/3 1/4],noise);
+    //x = x(45904:50000);
+    //[a,g]= lpc(x,3)
+    //est_x = filter([0 -a(2:$)],1,x);
+    //e = x-est_x;
+    //[acs,lags] = xcorr(e,'coeff');
+    //plot(1:97,x(4001:4097),1:97,est_x(4001:4097),'--');
+    //a = gca();
+    //a.grid = [1,1];
+    //title 'Original Signal vs. LPC Estimate';
+    //xlabel 'Sample number', ylabel 'Amplitude';
+    //legend('Original signal','LPC estimate');
+    
+    //Output :
+    // g  =
+    // 
+    //    1.0117019  
+    // a  =
+    // 
+    //    1.    0.51533    0.3313039    0.2783268  
+    // 
+
     //
     //
     // References
