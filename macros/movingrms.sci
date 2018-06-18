@@ -30,4 +30,5 @@ if (rhs<3) then
 elseif (rhs==3) then Fs=1;
 end
 [rmsx,w]=callOctave("movingrms",x,w,rc,Fs)
+
 endfunction
