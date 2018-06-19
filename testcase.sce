@@ -1,4 +1,6 @@
+exec loader.sce
 exec builder.sce
+exec unloader.sce
 exec loader.sce
 //cd macros
 //getd .
