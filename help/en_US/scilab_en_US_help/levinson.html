@@ -33,7 +33,53 @@
 
     <br /><br />
     <div class="refnamediv"><h1 class="refname">levinson</h1>
-    <p class="refpurpose"></p></div>
+    <p class="refpurpose">Levinson-Durbin Recurssion Algorithm</p>
+    <p class="para"></p></div>
+
+
+<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
+   <div class="synopsis"><pre><span class="default">a</span><span class="default"> = </span><span class="functionid">levinson</span><span class="default">(</span><span class="default">r</span><span class="default">)</span>
+<span class="default">a</span><span class="default"> = </span><span class="functionid">levinson</span><span class="default">(</span><span class="default">r</span><span class="default">,</span><span class="default">n</span><span class="default">)</span>
+<span class="default">[</span><span class="default">a</span><span class="default">,</span><span class="default">e</span><span class="default">] = </span><span class="functionid">levinson</span><span class="default">(</span><span class="default">r</span><span class="default">,</span><span class="default">n</span><span class="default">)</span>
+<span class="default">[</span><span class="default">a</span><span class="default">,</span><span class="default">e</span><span class="default">,</span><span class="default">k</span><span class="default">] = </span><span class="functionid">levinson</span><span class="default">(</span><span class="default">r</span><span class="default">,</span><span class="default">n</span><span class="default">)</span></pre></div>
+    <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Parameters</h3>
+   <dl><dt><span class="term">r</span>
+      <dd><p class="para">Real or complex deterministic autocorrelation sequence input</p></dd></dt>
+   <dt><span class="term">a</span>
+      <dd><p class="para">Coefficients of length(r)-1 order Autoregressive linear process</p></dd></dt>
+   <dt><span class="term">n</span>
+      <dd><p class="para">Order of autoregressive model (default value is length(r)-1 , if n is not given)</p></dd></dt>
+   <dt><span class="term">e</span>
+      <dd><p class="para">Prediction error of order n</p></dd></dt>
+   <dt><span class="term">k</span>
+      <dd><p class="para">Reflection coefficient vector of length n</p></dd></dt></dl>
+    <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para">The Levinson-Durbin recursion algorithm is used for finding an all-pole IIR filter with a given deterministic autocorrelation sequence (r)</p>
+
+   <p class="para"><span><img src='./_LaTeX_levinson.xml_1.png' style='position:relative;top:12px;width:255px;height:32px'/></span></p>
+
+    <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <p class="para">Estimate the coefficients of an autoregressive process given by equation</p>
+
+   <p class="para"><span><img src='./_LaTeX_levinson.xml_2.png' style='position:relative;top:9px;width:304px;height:26px'/></span></p>
+    <p class="para"></p>
+
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">a</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span> <span class="scilabnumber">0.1</span> <span class="scilaboperator">-</span><span class="scilabnumber">0.8</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span> 
+
+<span class="scilabid">v</span> <span class="scilaboperator">=</span> <span class="scilabnumber">0.4</span><span class="scilabdefault">;</span> <span class="scilabcomment">//variance, v=0.4</span>
+<span class="scilabid">w</span> <span class="scilaboperator">=</span> <a class="scilabcommand" href="scilab://sqrt">sqrt</a><span class="scilabopenclose">(</span><span class="scilabid">v</span><span class="scilabopenclose">)</span><span class="scilaboperator">*</span><a class="scilabcommand" href="scilab://rand">rand</a><span class="scilabopenclose">(</span><span class="scilabnumber">15000</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">normal</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">x</span> <span class="scilaboperator">=</span> <a class="scilabmacro" href="scilab://filter">filter</a><span class="scilabopenclose">(</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabid">a</span><span class="scilabdefault">,</span><span class="scilabid">w</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+
+<span class="scilabopenclose">[</span><span class="scilabid">r</span><span class="scilabdefault">,</span><span class="scilabid">lg</span><span class="scilabopenclose">]</span> <span class="scilaboperator">=</span> <a class="scilabmacro" href="scilab://xcorr">xcorr</a><span class="scilabopenclose">(</span><span class="scilabid">x</span><span class="scilabdefault">,</span><span class="scilabstring">&#0039;</span><span class="scilabstring">biased</span><span class="scilabstring">&#0039;</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">r</span><span class="scilabopenclose">(</span><span class="scilabid">lg</span><span class="scilaboperator">&#0060;</span><span class="scilabnumber">0</span><span class="scilabopenclose">)</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+
+<span class="scilabid">ar</span> <span class="scilaboperator">=</span> <span class="scilabid">levinson</span><span class="scilabopenclose">(</span><span class="scilabid">r</span><span class="scilabdefault">,</span><a class="scilabcommand" href="scilab://length">length</a><span class="scilabopenclose">(</span><span class="scilabid">a</span><span class="scilabopenclose">)</span><span class="scilaboperator">-</span><span class="scilabnumber">1</span><span class="scilabopenclose">)</span> <span class="scilabcomment">//coefficients of autoregressive process</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
     <br />
 
     <div class="manualnavbar">

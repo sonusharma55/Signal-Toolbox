@@ -33,7 +33,45 @@
 
     <br /><br />
     <div class="refnamediv"><h1 class="refname">isstable</h1>
-    <p class="refpurpose">SOS matrix corresponds to [bi(1) bi(2) bi(3) ai(1) ai(2) ai(3)].</p></div>
+    <p class="refpurpose">Checks stability of  given Discrete time system function</p>
+    <p class="para"></p></div>
+
+<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
+   <div class="synopsis"><pre><span class="default">flag</span><span class="default"> = </span><span class="default">ismaxphase</span><span class="default">(</span><span class="default">b</span><span class="default">,</span><span class="default">a</span><span class="default">)</span>
+<span class="default">flag</span><span class="default"> = </span><span class="default">ismaxphase</span><span class="default">(</span><span class="default">sos</span><span class="default">)</span></pre></div>
+    <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Parameters</h3>
+   <dl><dt><span class="term">b</span>
+      <dd><p class="para">Coefficients of numerator polynomial of system function</p></dd></dt>
+   <dt><span class="term">a</span>
+      <dd><p class="para">Coefficients of denumerator polynomial of system function</p></dd></dt>
+   <dt><span class="term">sos</span>
+      <dd><p class="para">Second order section matrix of order Kx6</p></dd></dt>
+   <dt><span class="term">flag</span>
+      <dd><p class="para">This function returns logical 1 if system is Stable (flag = 1)</p> <p class="para">Otherwise it returns logical 0 (flag = 0)</p></dd></dt></dl>
+    <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para">This function determines whether the given system function is Stable system function or not. Stable system means all poles of transfer function will be inside the unit circle in z-plane</p>
+    <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Example : 1 <p class="para">Example of stable system function</p></h3>
+   <p class="para"><span><img src='./_LaTeX_isstable.xml_1.png' style='position:relative;top:12px;width:163px;height:32px'/></span></p>
+    <p class="para"></p>
+
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">b</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span> <span class="scilabnumber">2</span><span class="scilabopenclose">]</span> <span class="scilabdefault">;</span> <span class="scilabcomment">//Numerator polynomial coefficients</span>
+<span class="scilabid">a</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span> <span class="scilaboperator">-</span><span class="scilabnumber">0.7</span> <span class="scilabnumber">0.1</span><span class="scilabopenclose">]</span> <span class="scilabdefault">;</span> <span class="scilabcomment">//Denumerator polynomial coefficients</span>
+<span class="scilabid">flag</span> <span class="scilaboperator">=</span> <span class="scilabid">isstable</span><span class="scilabopenclose">(</span><span class="scilabid">b</span><span class="scilabdefault">,</span><span class="scilabid">a</span><span class="scilabopenclose">)</span> <span class="scilabcomment">//This is an example of Stable system, hence it will give output as : flag = 1</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">Example : 2 <p class="para">Example of unstable system function</p></h3>
+
+   <p class="para"><span><img src='./_LaTeX_isstable.xml_2.png' style='position:relative;top:12px;width:146px;height:32px'/></span></p>
+    <p class="para"></p>
+
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">b</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span> <span class="scilabnumber">2</span><span class="scilabopenclose">]</span> <span class="scilabdefault">;</span> <span class="scilabcomment">//Numerator polynomial coefficients</span>
+<span class="scilabid">a</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span> <span class="scilabnumber">5</span> <span class="scilabnumber">6</span><span class="scilabopenclose">]</span> <span class="scilabdefault">;</span> <span class="scilabcomment">//Denumerator polynomial coefficients</span>
+<span class="scilabid">flag</span> <span class="scilaboperator">=</span> <span class="scilabid">isstable</span><span class="scilabopenclose">(</span><span class="scilabid">b</span><span class="scilabdefault">,</span><span class="scilabid">a</span><span class="scilabopenclose">)</span> <span class="scilabcomment">//This is an example of Unstable system, hence it will give output as : flag = 0</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
     <br />
 
     <div class="manualnavbar">

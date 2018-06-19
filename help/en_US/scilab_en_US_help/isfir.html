@@ -33,7 +33,38 @@
 
     <br /><br />
     <div class="refnamediv"><h1 class="refname">isfir</h1>
-    <p class="refpurpose">[nargout,nargin]=argn();</p></div>
+    <p class="refpurpose">Determines whether given system function is FIR or not</p>
+    <p class="para"></p></div>
+
+
+<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
+   <div class="synopsis"><pre><span class="default">fir</span><span class="default"> = </span><span class="functionid">isfir</span><span class="default">(</span><span class="default">b</span><span class="default">,</span><span class="default">a</span><span class="default">)</span>
+<span class="default">fir</span><span class="default"> = </span><span class="functionid">isfir</span><span class="default">(</span><span class="default">sos</span><span class="default">)</span></pre></div>
+    <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Parameters</h3>
+   <dl><dt><span class="term">b</span>
+      <dd><p class="para">Coefficients of numerator polynomial of system function</p></dd></dt>
+   <dt><span class="term">a</span>
+      <dd><p class="para">Coefficients of denumerator polynomial of system function</p></dd></dt>
+   <dt><span class="term">sos</span>
+      <dd><p class="para">Second order section matrix of order Kx6</p></dd></dt>
+   <dt><span class="term">fir</span>
+      <dd><p class="para">This function returns logical 1 if system is FIR (fir = 1)</p> <p class="para">Otherwise it returns logical 0 (fir = 0)</p></dd></dt></dl>
+    <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para">This function takes input a System function in terms of numerator and denumerator coefficients or in second order section (sos) matrix and checks for system having Finite Impulse Response (FIR) or not</p>
+<p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <p class="para">Checking given system function is FIR or not</p>
+   <p class="para"><span><img src='./_LaTeX_isfir.xml_1.png' style='position:relative;top:10px;width:168px;height:28px'/></span></p>
+    <p class="para"></p>
+   
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">b</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span> <span class="scilaboperator">-</span><span class="scilabnumber">1</span> <span class="scilabnumber">1</span><span class="scilabopenclose">]</span> <span class="scilabdefault">;</span>
+<span class="scilabid">a</span> <span class="scilaboperator">=</span> <span class="scilabnumber">1</span> <span class="scilabdefault">;</span>
+<span class="scilabid">f</span> <span class="scilaboperator">=</span> <span class="scilabid">isfir</span><span class="scilabopenclose">(</span><span class="scilabid">b</span><span class="scilabdefault">,</span><span class="scilabid">a</span><span class="scilabopenclose">)</span> <span class="scilabcomment">//This is an example of FIR system function, hence output will be f = 1</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
     <br />
 
     <div class="manualnavbar">

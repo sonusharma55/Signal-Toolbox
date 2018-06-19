@@ -33,52 +33,73 @@
 
     <br /><br />
     <div class="refnamediv"><h1 class="refname">medfilt1</h1>
-    <p class="refpurpose">1D median filtering</p></div>
+    <p class="refpurpose">1D median filtering</p>
+    <p class="para"></p></div>
 
 
 <div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
-   <div class="synopsis"><pre></pre></div></div>
+   <div class="synopsis"><pre><span class="default">y</span><span class="default"> = </span><span class="functionid">medfilt1</span><span class="default">(</span><span class="default">x</span><span class="default">)</span>
+<span class="default">y</span><span class="default"> = </span><span class="functionid">medfilt1</span><span class="default">(</span><span class="default">x</span><span class="default">, </span><span class="default">n</span><span class="default">)</span>
+<span class="default">y</span><span class="default"> = </span><span class="functionid">medfilt1</span><span class="default">(</span><span class="default">x</span><span class="default">, </span><span class="default">n</span><span class="default">, </span><span class="default">dim</span><span class="default">)</span>
+<span class="default">y</span><span class="default"> = </span><span class="default">medfitl1</span><span class="default">(</span><span class="default">__</span><span class="default">, </span><span class="default">nanflag</span><span class="default">, </span><span class="default">padding</span><span class="default">)</span></pre></div>
+   <p class="para"></p></div>
 
 <div class="refsection"><h3 class="title">Description</h3>
-   <p class="para">y = medfilt1(x)
-Applies a 3rd order 1-dimensional median filter to input x along the
-first non-zero dimension. The function appropriately pads the signal
+   <p class="para">y = medfilt1(x)</p>
+<p class="para">Applies a 3rd order 1-dimensional median filter to input x along the
+first non-zero dimension.</p>
+ <p class="para">The function appropriately pads the signal
 with zeros at the endings. For a segment, a median is calculated as
 the middle value (average of two middle values) for odd number
-number (even number) of data points.
-y = medfilt1(x,n)
-Applies a nth order 1-dimensional median filter.
-y = medfilt1(x,n,dim)
-Applies the median filter along the n-th dimension
-y = medfilt1(__, nanflag, padding)
-nanflag specifies how NaN values are treated. padding specifies the
+number (even number) of data points.</p>
+<p class="para"></p>
+<p class="para">y = medfilt1(x,n)</p>
+<p class="para">Applies a nth order 1-dimensional median filter.</p>
+<p class="para"></p>
+<p class="para">y = medfilt1(x,n,dim)</p>
+<p class="para">Applies the median filter along the n-th dimension</p>
+<p class="para"></p>
+<p class="para">y = medfilt1(__, nanflag, padding)</p>
+<p class="para">nanflag specifies how NaN values are treated. padding specifies the
 type of filtering to be performed at the signal edges.</p>
+
    <p class="para"></p></div>
 
 <div class="refsection"><h3 class="title">Parameters</h3>
    <dl><dt><span class="term">x:</span>
-      <dd><p class="para">int | double</p></dd></dt>
+      <dd><p class="para">int | double</p> <p class="para">Input signal.</p></dd></dt>
    <dt><span class="term">n:</span>
-      <dd><p class="para">positive integer scalar</p></dd></dt>
+      <dd><p class="para">positive integer, scalar</p><p class="para">Filter order.</p>
+     <p class="para">Defaults to 3.The order of the median filter. Must be less than 
+      (length of the signal) where signals are 1D vectors along the 
+      dimension of x to be filtered</p></dd></dt>
    <dt><span class="term">dim:</span>
-      <dd><p class="para">positive integer scalar</p></dd></dt>
+      <dd><p class="para">positive integer scalar</p><p class="para">Dimension to filter along.</p>
+     <p class="para">Defaults to first non-singleton dimension of x</p></dd></dt>
    <dt><span class="term">nanflag:</span>
-      <dd><p class="para">&#0039;includenan&#0039; (default) | &#0039;omitnan&#0039;</p></dd></dt>
-   <dt><span class="term">* includenan:</span>
-      <dd><p class="para">Filtering such that the median of any segment</p></dd></dt>
-   <dt><span class="term">* omitnan:</span>
-      <dd><p class="para">Filtering with NaNs omitted in each segment. If a segment</p></dd></dt>
+      <dd><p class="para">&#0039;includenan&#0039; (default) | &#0039;omitnan&#0039;</p> <p class="para">NaN condition.</p>
+     <p class="para">* includenan: Filtering such that the median of any segment containing a NaN is also a NaN.</p>
+     <p class="para">* omitnan: Filtering with NaNs omitted in each segment. If a segment contains all NaNs, the result is NaN</p></dd></dt>
+
    <dt><span class="term">y:</span>
-      <dd><p class="para">int | double</p></dd></dt></dl></div>
+      <dd><p class="para">int | double</p><p class="para">The filtered signal.</p>
+      <p class="para">y has the same size as x</p></dd></dt></dl>
+   <p class="para"></p></div>
 
 <div class="refsection"><h3 class="title">Examples</h3>
-   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabnumber">1</span><span class="scilabopenclose">)</span> <span class="scilabid">Noise</span> <span class="scilabid">supression</span> <span class="scilabid">using</span> <a class="scilabmacro" href="scilab://median">median</a> <span class="scilabstring">filtering</span>
-<span class="scilabid">fs</span> <span class="scilaboperator">=</span> <span class="scilabnumber">1e3</span><span class="scilabdefault">;</span>
-<span class="scilabid">t</span> <span class="scilaboperator">=</span>  <span class="scilabnumber">1</span><span class="scilabspecial">:</span><span class="scilabnumber">1</span><span class="scilaboperator">/</span><span class="scilabid">fs</span><span class="scilabspecial">:</span><span class="scilabnumber">1</span><span class="scilabdefault">;</span>
-<span class="scilabid">s</span> <span class="scilaboperator">=</span> <a class="scilabcommand" href="scilab://sin">sin</a><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilaboperator">*</span><span class="scilabconstants">%pi</span><span class="scilaboperator">*</span><span class="scilabnumber">2</span><span class="scilaboperator">*</span><span class="scilabid">t</span><span class="scilabopenclose">)</span><span class="scilaboperator">+</span> <a class="scilabcommand" href="scilab://cos">cos</a><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilaboperator">*</span><span class="scilabconstants">%pi</span><span class="scilaboperator">*</span><span class="scilabnumber">5</span><span class="scilaboperator">*</span><span class="scilabid">t</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
-<span class="scilabcomment">// Adding noise</span>
-<span class="scilabid">x</span> <span class="scilaboperator">=</span> <span class="scilabid">s</span> <span class="scilaboperator">+</span> <span class="scilabnumber">0.1</span><span class="scilaboperator">*</span><span class="scilabid">randn</span><span class="scilabopenclose">(</span><a class="scilabcommand" href="scilab://size">size</a><span class="scilabopenclose">(</span><span class="scilabid">s</span><span class="scilabopenclose">)</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
-<span class="scilabid">y</span> <span class="scilaboperator">=</span> <span class="scilabid">medfilt1</span><span class="scilabopenclose">(</span><span class="scilabid">x</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabcomment">//Generate a sinusoidal signal sampled for 1 second at 100 Hz. Add a higher-frequency sinusoid to simulate noise. </span>
+<span class="scilabid">fs</span> <span class="scilaboperator">=</span> <span class="scilabnumber">100</span><span class="scilabdefault">;</span>
+<span class="scilabid">t</span> <span class="scilaboperator">=</span> <span class="scilabnumber">0</span><span class="scilabspecial">:</span><span class="scilabnumber">1</span><span class="scilaboperator">/</span><span class="scilabid">fs</span><span class="scilabspecial">:</span><span class="scilabnumber">1</span><span class="scilabdefault">;</span>
+<span class="scilabid">x</span> <span class="scilaboperator">=</span> <a class="scilabcommand" href="scilab://sin">sin</a><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilaboperator">*</span><span class="scilabconstants">%pi</span><span class="scilaboperator">*</span><span class="scilabid">t</span><span class="scilaboperator">*</span><span class="scilabnumber">3</span><span class="scilabopenclose">)</span><span class="scilaboperator">+</span><span class="scilabnumber">0.25</span><span class="scilaboperator">*</span><a class="scilabcommand" href="scilab://sin">sin</a><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilaboperator">*</span><span class="scilabconstants">%pi</span><span class="scilaboperator">*</span><span class="scilabid">t</span><span class="scilaboperator">*</span><span class="scilabnumber">40</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+
+<span class="scilabcomment">//Use a 10th-order median filter to smooth the signal. Plot the result.</span>
+<span class="scilabid">y</span> <span class="scilaboperator">=</span> <span class="scilabid">medfilt1</span><span class="scilabopenclose">(</span><span class="scilabid">x</span><span class="scilabdefault">,</span><span class="scilabnumber">10</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<a class="scilabmacro" href="scilab://plot">plot</a><span class="scilabopenclose">(</span><span class="scilabid">t</span><span class="scilabdefault">,</span><span class="scilabid">x</span><span class="scilabdefault">,</span><span class="scilabid">t</span><span class="scilabdefault">,</span><span class="scilabid">y</span><span class="scilabopenclose">)</span>
+<a class="scilabmacro" href="scilab://legend">legend</a><span class="scilabopenclose">(</span><span class="scilabstring">&#0039;</span><span class="scilabstring">Original</span><span class="scilabstring">&#0039;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0039;</span><span class="scilabstring">Filtered</span><span class="scilabstring">&#0039;</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">y</span> <span class="scilaboperator">=</span> <a class="scilabcommand" href="scilab://round">round</a><span class="scilabopenclose">(</span><span class="scilabid">y</span><span class="scilaboperator">*</span><span class="scilabnumber">10000</span><span class="scilabopenclose">)</span><span class="scilaboperator">/</span><span class="scilabnumber">10000</span><span class="scilabdefault">;</span>
+<span class="scilabid">y</span> <span class="scilaboperator">=</span> <span class="scilabid">y</span><span class="scilaboperator">&#0039;</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div>
+
+<img src='./medfilt1_1.png'/></div>
 
 <div class="refsection"><h3 class="title">See also</h3>
    <ul class="itemizedlist"><li class="member"><a href="scilab://filter" class="link">| hampel | median | sgolayfilt</a></li></ul></div>

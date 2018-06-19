@@ -1,73 +1,73 @@
 function y = medfilt1(x, varargin)
-    // 1D median filtering
-    //
-    // Calling sequence
-    // y = medfilt1(x)
-    // y = medfilt1(x, n)
-    // y = medfilt1(x, n, dim)
-    // y = medfitl1(__, nanflag, padding)
-    // 
-    // Description
-    // y = medfilt1(x)
-    //      Applies a 3rd order 1-dimensional median filter to input x along the
-    //      first non-zero dimension. The function appropriately pads the signal
-    //      with zeros at the endings. For a segment, a median is calculated as
-    //      the middle value (average of two middle values) for odd number
-    //      number (even number) of data points.
-    // y = medfilt1(x,n)
-    //      Applies a nth order 1-dimensional median filter.
-    // y = medfilt1(x,n,dim)
-    //      Applies the median filter along the n-th dimension
-    // y = medfilt1(__, nanflag, padding)
-    //      nanflag specifies how NaN values are treated. padding specifies the 
-    //      type of filtering to be performed at the signal edges.
-    //
-    // Parameters
-    // x: int | double
-    //      Input signal.
-    // n: positive integer scalar
-    //      Filter order. 
-    //      Defaults to 3.The order of the median filter. Must be less than 
-    //      (length of the signal) where signals are 1D vectors along the 
-    //      dimension of x to be filtered
-    // dim: positive integer scalar
-    //      Dimension to filter along. 
-    //      Defaults to first non-singleton dimension of x
-    // nanflag: 'includenan' (default) | 'omitnan'
-    //      NaN condition.
-    //      * includenan: Filtering such that the median of any segment
-    //          containing a NaN is also a NaN.
-    //      * omitnan: Filtering with NaNs omitted in each segment. If a segment
-    //          contains all NaNs, the result is NaN
-    // y: int | double
-    //      The filtered signal.
-    //      y has the same size as x
-    //
-
-    // Examples : Noise supression using 10th order (n =10) median filtering
-    
-    ////Generate a sinusoidal signal sampled for 1 second at 100 Hz. Add a higher-frequency sinusoid to simulate noise. 
-    //fs = 100;
-    //t = 0:1/fs:1;
-    //x = sin(2*%pi*t*3)+0.25*sin(2*%pi*t*40);
-    //
-    ////Use a 10th-order median filter to smooth the signal. Plot the result.
-    //y = medfilt1(x,10);
-    //plot(t,x,t,y)
-    //legend('Original','Filtered');
-    //y = round(y*10000)/10000;
-    //y = y'
-    
-    //Output :
-    // Output is a plot of x versus t and y versus t
-    // samples of y is stored in medfilt1op.txt
-    
-    //
-    // See also
-    // filter | hampel | median | sgolayfilt
-    //
-    // Authors
-    // Ayush Baid
+// 1D median filtering
+//
+// Calling sequence
+// y = medfilt1(x)
+// y = medfilt1(x, n)
+// y = medfilt1(x, n, dim)
+// y = medfitl1(__, nanflag, padding)
+// 
+// Description
+// y = medfilt1(x)
+//      Applies a 3rd order 1-dimensional median filter to input x along the
+//      first non-zero dimension. The function appropriately pads the signal
+//      with zeros at the endings. For a segment, a median is calculated as
+//      the middle value (average of two middle values) for odd number
+//      number (even number) of data points.
+// y = medfilt1(x,n)
+//      Applies a nth order 1-dimensional median filter.
+// y = medfilt1(x,n,dim)
+//      Applies the median filter along the n-th dimension
+// y = medfilt1(__, nanflag, padding)
+//      nanflag specifies how NaN values are treated. padding specifies the 
+//      type of filtering to be performed at the signal edges.
+//
+// Parameters
+// x: int | double
+//      Input signal.
+// n: positive integer scalar
+      Filter order. 
+      Defaults to 3.The order of the median filter. Must be less than 
+      (length of the signal) where signals are 1D vectors along the 
+      dimension of x to be filtered
+// dim: positive integer scalar
+//      Dimension to filter along. 
+//      Defaults to first non-singleton dimension of x
+// nanflag: 'includenan' (default) | 'omitnan'
+//      NaN condition.
+//      * includenan: Filtering such that the median of any segment
+//          containing a NaN is also a NaN.
+//      * omitnan: Filtering with NaNs omitted in each segment. If a segment
+//          contains all NaNs, the result is NaN
+// y: int | double
+//      The filtered signal.
+//      y has the same size as x
+//
+//
+// Examples : Noise supression using 10th order (n =10) median filtering
+//
+////Generate a sinusoidal signal sampled for 1 second at 100 Hz. Add a higher-frequency sinusoid to simulate noise. 
+//fs = 100;
+//t = 0:1/fs:1;
+//x = sin(2*%pi*t*3)+0.25*sin(2*%pi*t*40);
+//
+////Use a 10th-order median filter to smooth the signal. Plot the result.
+//y = medfilt1(x,10);
+//plot(t,x,t,y)
+//legend('Original','Filtered');
+//y = round(y*10000)/10000;
+//y = y'
+//
+//Output :
+// Output is a plot of x versus t and y versus t
+// samples of y is stored in medfilt1op.txt
+//
+//
+// See also
+// filter | hampel | median | sgolayfilt
+//
+// Authors
+// Ayush Baid
     
     
     

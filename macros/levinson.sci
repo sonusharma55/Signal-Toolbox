@@ -1,6 +1,6 @@
 //Levinson- Durbin Recurssion Algorithm
 
-//calling syntax
+////calling syntax
 //a = levinson(r)
 //a = levinson(r,n)
 //[a,e] = levinson(r,n)
