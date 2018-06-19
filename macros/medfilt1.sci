@@ -26,10 +26,10 @@ function y = medfilt1(x, varargin)
 // x: int | double
 //      Input signal.
 // n: positive integer scalar
-      Filter order. 
-      Defaults to 3.The order of the median filter. Must be less than 
-      (length of the signal) where signals are 1D vectors along the 
-      dimension of x to be filtered
+//      Filter order. 
+//      Defaults to 3.The order of the median filter. Must be less than 
+//      (length of the signal) where signals are 1D vectors along the 
+//      dimension of x to be filtered
 // dim: positive integer scalar
 //      Dimension to filter along. 
 //      Defaults to first non-singleton dimension of x
