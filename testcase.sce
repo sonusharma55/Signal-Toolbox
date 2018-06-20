@@ -1,3 +1,5 @@
+exec ../FOSSEE_Scilab_Octave_Interface_Toolbox/loader.sce
+
 exec loader.sce
 exec builder.sce
 exec unloader.sce
@@ -95,6 +97,32 @@ else
     disp("lar2rc Test failed")
 end
 
+
+
+/////////////////////////////////////////////
+
+
+/////////Test case for       38)levinson                  //////////
+
+a = [1 0.1 -0.8];
+v = 0.4;
+w = sqrt(v)*rand(15000,1,"normal");
+x = filter(1,a,w);
+
+[r,lg] = xcorr(x,'biased');
+r(lg<0) = [];
+
+ar = levinson(r,length(a)-1)
+
+ar = round(ar*10000)/10000
+
+if(ar == [1 0.1043 -0.8010])
+           test_pass=[test_pass,1]
+    else
+	test_pass=[test_pass,0]
+	disp("levinson Test failed")
+end
+
 /////////////////////////////////////////////
 
 
@@ -106,7 +134,7 @@ x = x(45904:50000);
 [a,g]= lpc(x,3)
 a = round(a*10000)/10000
 
-if(a == [1 0.4685 0.3369 0.2516])
+if(a == [1 0.5177 0.3310 0.2572])
         test_pass=[test_pass,1]
 else
     test_pass=[test_pass,0]
