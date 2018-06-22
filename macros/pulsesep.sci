@@ -1,6 +1,7 @@
 function [s, initialcross, finalcross, nextcross, midreference]= pulsesep(x, varargin)
     
     // This function estimate pulse  separation between bilevel waveform pulses.
+    
     // Calling Sequence
     // s=pulsesep(x)
     // s=pulsesep(x, Fs)
@@ -35,9 +36,17 @@ function [s, initialcross, finalcross, nextcross, midreference]= pulsesep(x, var
     // midreference: return mid reference value corrosponding to mid percenr reference value.
     
     // Examples
-    // x=[1.2, 5, 10, -20, 12]
-    //t=1:length(x)
-    //s=pulsesep(x, t) 
+    //x = fscanfMat("macros/pulsedata_x.txt");
+    //t = fscanfMat("macros/pulsedata_t.txt");
+    //clf
+    //p = pulsesep(x,t,'fig','ON')
+    
+    //Output
+    // p  =
+    // 
+    //    0.3501425
+    //also it generates a plot of pulse with pulse separation
+
     // See also
     // Authors
     // Jitendra Singh
@@ -403,7 +412,7 @@ midreference=midref;
      ylabel("Level (Volts)", "fontsize",3, "color", "black" )  
        
 
-     legends(["pulse seperation"; "Signal";  "mid cross"; "upper boundary"; "upper state"; "lower boundary";  "mid reference"; "upper boundary"; "lower state"; "lower boundary"],  [[-11; 2] , [1;1], [-10;5], [5;2], [1;2], [5;2], [5;1], [3;2],[1;2], [3;2]], opt='?')
+     legends(["pulse seperation"; "Signal";  "mid cross"; "upper boundary"; "upper state"; "lower boundary";  "mid reference"; "upper boundary"; "lower state"; "lower boundary"],  [[-11; 2] , [1;1], [-10;5], [5;2], [1;2], [5;2], [5;1], [3;2],[1;2], [3;2]], 1)
 
    end    
    end  

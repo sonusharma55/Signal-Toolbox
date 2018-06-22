@@ -161,27 +161,58 @@ if(y == fscanfMat("macros/medfilt1op.txt"))
 	test_pass=[test_pass,0]
 	disp("medfilt1 Test failed")
 end
-//
-//
-///////////////////////////////////////////////
-//
-//
-///////////Test case for       9) Istrellis                  //////////
-//
-//trellis.numInputSymbols = 2;
-//trellis.numOutputSymbols = 2;
-//trellis.numStates = 2;
-//trellis.nextStates = [0 1;0 1];
-//trellis.outputs = [0 0;1 1];
-//
-//[isok,status] = istrellis(trellis)
-//
-//if(isempty(status) & isok)
-//           test_pass=[test_pass,1]
-//    else
-//	test_pass=[test_pass,0]
-//	disp("istrellis Test failed")
-//end
+
+
+/////////////////////////////////////////////
+
+
+/////////Test case for       58) pulseperiod                  //////////
+
+x = fscanfMat("macros/pulsedata_x.txt");
+t = fscanfMat("macros/pulsedata_t.txt");
+p = pulseperiod(x,t);
+p = round(p*10000)/10000
+
+if(p == 0.5003)
+           test_pass=[test_pass,1]
+    else
+	test_pass=[test_pass,0]
+	disp("pulseperiod Test failed")
+end
+
+///////////////////////////////////////
+
+/////////Test case for       59) pulsesep                  //////////
+
+x = fscanfMat("macros/pulsedata_x.txt");
+t = fscanfMat("macros/pulsedata_t.txt");
+p = pulsesep(x,t);
+p = round(p*10000)/10000
+
+if(p == 0.3501)
+           test_pass=[test_pass,1]
+    else
+	test_pass=[test_pass,0]
+	disp("pulsesep Test failed")
+end
+
+///////////////////////////////////////
+
+/////////Test case for       60) pulsewidth                  //////////
+
+x = fscanfMat("macros/pulsedata_x.txt");
+t = fscanfMat("macros/pulsedata_t.txt");
+p = pulsewidth(x,t);
+p = round(p*10000)/10000
+
+if(p == 0.1502)
+           test_pass=[test_pass,1]
+    else
+	test_pass=[test_pass,0]
+	disp("pulsewidth Test failed")
+end
+
+
 //
 ///////////////////////////////////////////////
 //

@@ -1,6 +1,7 @@
 function [p, initialcross, finalcross, nextcross, midreference]= pulseperiod(x, varargin)
     
     // This function estimate pulse period of real vector X.
+
     // Calling Sequence
     // p=pulseperiod(x)
     // p=pulseperiod(x, Fs)
@@ -9,7 +10,6 @@ function [p, initialcross, finalcross, nextcross, midreference]= pulseperiod(x, 
     // p=pulseperiod(x, t, 'MidPercentReferenceLevel', N )
     // p=pulseperiod(x, t, 'Tolerance', M)
     // p=pulseperiod(x, t,'StateLevels', O)
-    
     // [p initialcross finalcross nextcross midreference]=pulseperiod(x)
     // [p initialcross finalcross nextcross midreference]=pulseperiod(x, t)
     // [p initialcross finalcross nextcross midreference]=pulseperiod(x, t)
@@ -17,7 +17,7 @@ function [p, initialcross, finalcross, nextcross, midreference]= pulseperiod(x, 
     // [p initialcross finalcross nextcross midreference]=pulseperiod(x, t, 'MidPercentReferenceLevel', N )
     // [p initialcross finalcross nextcross midreference]= pulseperiod(x, t, 'Tolerance', M)
     // [p initialcross finalcross nextcross midreference]= pulseperiod(x, t,'StateLevels', O)
-    // [p initialcross finalcross nextcross midreference]= pulseperiod(x, t,'StateLevels', O, 'fig', on or off)
+    // [p initialcross finalcross nextcross midreference]= pulseperiod(x, t,'StateLevels', O, 'fig', 'on' or 'off')
     //  
     // Parameters
     // x: real vector.
@@ -32,12 +32,21 @@ function [p, initialcross, finalcross, nextcross, midreference]= pulseperiod(x, 
     // initialcross: returns a vector of initial cross values of bilevel waveform transitions X
     // finalcross: returns a vector of final cross values of bilevel waveform transitions X
     // nextcross: returns a vector of next cross values of bilevel waveform transitions X
-    // midreference: return mid reference value corrosponding to mid percenr reference value.
+    // midreference: return mid reference value corrosponding to mid percent reference value.
     
     // Examples
-    // x=[1.2, 5, 10, -20, 12]
-    //t=1:length(x)
-    //p=pulseperiod(x, t) 
+    //x = fscanfMat("macros/pulsedata_x.txt");
+    //t = fscanfMat("macros/pulsedata_t.txt");
+    //clf
+    //p = pulseperiod(x,t,'fig','ON')
+    
+    //Output
+    // p  =
+    // 
+    //    0.5002996 
+    //also it generates a pulse plot with pulse period 
+    
+    
     // See also
     // Authors
     // Jitendra Singh
@@ -407,7 +416,7 @@ midreference=midref; // return midreference value
      ylabel("Level (Volts)", "fontsize",3, "color", "black" )  
        
 
-     legends(["pulse period"; "Signal";  "mid cross"; "upper boundary"; "upper state"; "lower boundary";  "mid reference"; "upper boundary"; "lower state"; "lower boundary"],  [[-11; 2] , [1;1], [-10;5], [5;2], [1;2], [5;2], [5;1], [3;2],[1;2], [3;2]], opt='?')
+     legends(["pulse period"; "Signal";  "mid cross"; "upper boundary"; "upper state"; "lower boundary";  "mid reference"; "upper boundary"; "lower state"; "lower boundary"],  [[-11; 2] , [1;1], [-10;5], [5;2], [1;2], [5;2], [5;1], [3;2],[1;2], [3;2]],1)
 
    end    
    end  

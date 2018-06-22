@@ -33,17 +33,65 @@
 
     <br /><br />
     <div class="refnamediv"><h1 class="refname">pulsewidth</h1>
-    <p class="refpurpose"></p></div>
-
+    <p class="refpurpose">This function estimate pulse width of real vector x.</p>
+    <p class="para"></p></div>
 
 <div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
-   <div class="synopsis"><pre><span class="default">w</span><span class="default">=</span><span class="functionid">pulsewidth</span><span class="default">(</span><span class="default">x</span><span class="default">)</span>
-<span class="default">w</span><span class="default">=</span><span class="functionid">pulsewidth</span><span class="default">(</span><span class="default">x</span><span class="default">, </span><span class="default">Fs</span><span class="default">)</span>
-<span class="default">w</span><span class="default">=</span><span class="functionid">pulsewidth</span><span class="default">(</span><span class="default">x</span><span class="default">, </span><span class="default">t</span><span class="default">)</span>
-<span class="default">w</span><span class="default">=</span><span class="functionid">pulsewidth</span><span class="default"> (</span><span class="default">x</span><span class="default">, </span><span class="default">t</span><span class="default">, </span>&#0039;<span class="default">Polarity</span>&#0039;<span class="default">, </span><span class="default">pol</span><span class="default">)</span>
-<span class="default">w</span><span class="default">=</span><span class="functionid">pulsewidth</span><span class="default">(</span><span class="default">x</span><span class="default">, </span><span class="default">t</span><span class="default">, </span>&#0039;<span class="default">MidPercentReferenceLevel</span>&#0039;<span class="default">, </span><span class="default">N</span><span class="default"> )</span>
-<span class="default">w</span><span class="default">=</span><span class="functionid">pulsewidth</span><span class="default">(</span><span class="default">x</span><span class="default">, </span><span class="default">t</span><span class="default">, </span>&#0039;<span class="default">Tolerance</span>&#0039;<span class="default">, </span><span class="default">M</span><span class="default">)</span>
-<span class="default">w</span><span class="default">=</span><span class="functionid">pulsewidth</span><span class="default">(</span><span class="default">x</span><span class="default">, </span><span class="default">t</span><span class="default">,</span>&#0039;<span class="default">StateLevels</span>&#0039;<span class="default">, </span><span class="default">O</span><span class="default">)</span></pre></div></div>
+   <div class="synopsis"><pre><span class="default">p</span><span class="default">=</span><span class="functionid">pulsewidth</span><span class="default">(</span><span class="default">x</span><span class="default">)</span>
+<span class="default">p</span><span class="default">=</span><span class="functionid">pulsewidth</span><span class="default">(</span><span class="default">x</span><span class="default">, </span><span class="default">Fs</span><span class="default">)</span>
+<span class="default">p</span><span class="default">=</span><span class="functionid">pulsewidth</span><span class="default">(</span><span class="default">x</span><span class="default">, </span><span class="default">t</span><span class="default">)</span>
+<span class="default">p</span><span class="default">=</span><span class="functionid">pulsewidth</span><span class="default"> (</span><span class="default">x</span><span class="default">, </span><span class="default">t</span><span class="default">, </span>&#0039;<span class="default">Polarity</span>&#0039;<span class="default">, </span><span class="default">pol</span><span class="default">)</span>
+<span class="default">p</span><span class="default">=</span><span class="functionid">pulsewidth</span><span class="default">(</span><span class="default">x</span><span class="default">, </span><span class="default">t</span><span class="default">, </span>&#0039;<span class="default">MidPercentReferenceLevel</span>&#0039;<span class="default">, </span><span class="default">N</span><span class="default"> )</span>
+<span class="default">p</span><span class="default">=</span><span class="functionid">pulsewidth</span><span class="default">(</span><span class="default">x</span><span class="default">, </span><span class="default">t</span><span class="default">, </span>&#0039;<span class="default">Tolerance</span>&#0039;<span class="default">, </span><span class="default">M</span><span class="default">)</span>
+<span class="default">p</span><span class="default">=</span><span class="functionid">pulsewidth</span><span class="default">(</span><span class="default">x</span><span class="default">, </span><span class="default">t</span><span class="default">,</span>&#0039;<span class="default">StateLevels</span>&#0039;<span class="default">, </span><span class="default">O</span><span class="default">)</span>
+<span class="default">[</span><span class="default">p</span> <span class="default">initialcross</span> <span class="default">finalcross</span> <span class="default">nextcross</span> <span class="default">midreference</span><span class="default">]=</span><span class="functionid">pulsewidth</span><span class="default">(</span><span class="default">x</span><span class="default">)</span>
+<span class="default">[</span><span class="default">p</span> <span class="default">initialcross</span> <span class="default">finalcross</span> <span class="default">nextcross</span> <span class="default">midreference</span><span class="default">]=</span><span class="functionid">pulsewidth</span><span class="default">(</span><span class="default">x</span><span class="default">, </span><span class="default">t</span><span class="default">)</span>
+<span class="default">[</span><span class="default">p</span> <span class="default">initialcross</span> <span class="default">finalcross</span> <span class="default">nextcross</span> <span class="default">midreference</span><span class="default">]=</span><span class="functionid">pulsewidth</span><span class="default">(</span><span class="default">x</span><span class="default">, </span><span class="default">t</span><span class="default">)</span>
+<span class="default">[</span><span class="default">p</span> <span class="default">initialcross</span> <span class="default">finalcross</span> <span class="default">nextcross</span> <span class="default">midreference</span><span class="default">]=</span><span class="functionid">pulsewidth</span><span class="default">(</span><span class="default">x</span><span class="default">, </span><span class="default">t</span><span class="default">, </span>&#0039;<span class="default">Polarity</span>&#0039;<span class="default">, </span><span class="default">pol</span><span class="default">)</span>
+<span class="default">[</span><span class="default">p</span> <span class="default">initialcross</span> <span class="default">finalcross</span> <span class="default">nextcross</span> <span class="default">midreference</span><span class="default">]=</span><span class="functionid">pulsewidth</span><span class="default">(</span><span class="default">x</span><span class="default">, </span><span class="default">t</span><span class="default">, </span>&#0039;<span class="default">MidPercentReferenceLevel</span>&#0039;<span class="default">, </span><span class="default">N</span><span class="default"> )</span>
+<span class="default">[</span><span class="default">p</span> <span class="default">initialcross</span> <span class="default">finalcross</span> <span class="default">nextcross</span> <span class="default">midreference</span><span class="default">]= </span><span class="functionid">pulsewidth</span><span class="default">(</span><span class="default">x</span><span class="default">, </span><span class="default">t</span><span class="default">, </span>&#0039;<span class="default">Tolerance</span>&#0039;<span class="default">, </span><span class="default">M</span><span class="default">)</span>
+<span class="default">[</span><span class="default">p</span> <span class="default">initialcross</span> <span class="default">finalcross</span> <span class="default">nextcross</span> <span class="default">midreference</span><span class="default">]= </span><span class="functionid">pulsewidth</span><span class="default">(</span><span class="default">x</span><span class="default">, </span><span class="default">t</span><span class="default">,</span>&#0039;<span class="default">StateLevels</span>&#0039;<span class="default">, </span><span class="default">O</span><span class="default">)</span>
+<span class="default">[</span><span class="default">p</span> <span class="default">initialcross</span> <span class="default">finalcross</span> <span class="default">nextcross</span> <span class="default">midreference</span><span class="default">]= </span><span class="functionid">pulsewidth</span><span class="default">(</span><span class="default">x</span><span class="default">, </span><span class="default">t</span><span class="default">,</span>&#0039;<span class="default">StateLevels</span>&#0039;<span class="default">, </span><span class="default">O</span><span class="default">, </span>&#0039;<span class="default">fig</span>&#0039;<span class="default">, </span><span class="default">f</span><span class="default">)</span></pre></div>
+    <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Parameters</h3>
+   <dl><dt><span class="term">x</span>
+      <dd><p class="para">: real input vector</p></dd></dt>
+   <dt><span class="term">Fs</span>
+      <dd><p class="para">: specifies the sample rate, Fs, as a positive   scalar, where the first sample instant corresponds to a time of zero.</p></dd></dt>
+   <dt><span class="term">t</span>
+      <dd><p class="para">: defiene instant sample time t as vector with same length of x, or specifies the sample rate, t, as a positive scalar.</p></dd></dt>
+   <dt><span class="term">&#0039;Polarity&#0039;,  pol</span>
+      <dd><p class="para">: pol specify the polarity of the pulse as either &#0039;positive&#0039; or &#0039;negative&#0039;, where the default value is &#0039;positive&#0039;</p></dd></dt>
+   <dt><span class="term">&#0039;MidPercentReferenceLevel&#0039;, N</span>
+      <dd><p class="para">: specify the mid percent reference leves as a percentage, default value of N is 50.</p></dd></dt>
+   <dt><span class="term">&#0039;Tolerance&#0039;, M</span>
+      <dd><p class="para">: define the tolerance value as real scaler value, where default value of M is 2.0.</p></dd></dt>
+   <dt><span class="term">&#0039;StateLevels&#0039;, O</span>
+      <dd><p class="para">: O define the lower and upper state levels as two element real vector.</p></dd></dt>
+   <dt><span class="term">&#0039;fig&#0039;, f</span>
+      <dd><p class="para">: f specify the logical input value to display figure as one of &#0039;on&#0039; or &#0039;off&#0039;, where the default input in &#0039;off&#0039;.</p></dd></dt>
+
+   <dt><span class="term">p</span>
+      <dd><p class="para">: returns a vector of difference between the mid-crossings of the initial transition of each positive-polarity pulse and the next positive-going transition</p></dd></dt>
+   <dt><span class="term">initialcross</span>
+      <dd><p class="para">: returns a vector of initial cross values of bilevel waveform transitions x.</p></dd></dt>
+   <dt><span class="term">finalcross</span>
+      <dd><p class="para">: returns a vector of final cross values of bilevel waveform transitions x.</p></dd></dt>
+   <dt><span class="term">nextcross</span>
+      <dd><p class="para">: returns a vector of next cross values of bilevel waveform transitions x.</p></dd></dt>
+   <dt><span class="term">midreference</span>
+      <dd><p class="para">: return mid reference value corrosponding to mid percent reference value.</p></dd></dt></dl>
+    <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">x</span> <span class="scilaboperator">=</span> <a class="scilabcommand" href="scilab://fscanfMat">fscanfMat</a><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">macros/pulsedata_x.txt</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>  <span class="scilabcomment">//Importing samples of pulse</span>
+<span class="scilabid">t</span> <span class="scilaboperator">=</span> <a class="scilabcommand" href="scilab://fscanfMat">fscanfMat</a><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">macros/pulsedata_t.txt</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<a class="scilabmacro" href="scilab://clf">clf</a>                                       <span class="scilabcomment">//clearing plot history</span>
+<span class="scilabid">p</span> <span class="scilaboperator">=</span> <span class="scilabid">pulsewidth</span><span class="scilabopenclose">(</span><span class="scilabid">x</span><span class="scilabdefault">,</span><span class="scilabid">t</span><span class="scilabdefault">,</span><span class="scilabstring">&#0039;</span><span class="scilabstring">fig</span><span class="scilabstring">&#0039;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0039;</span><span class="scilabstring">ON</span><span class="scilabstring">&#0039;</span><span class="scilabopenclose">)</span>           <span class="scilabcomment">// Detremining pulse width and ploting it</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div>
+
+<img src='./pulsewidth_1.png'/></div>
     <br />
 
     <div class="manualnavbar">
