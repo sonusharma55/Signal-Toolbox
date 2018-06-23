@@ -44,6 +44,7 @@
 <mapID target="cheby2" url="cheby2.html"/>
 <mapID target="check" url="check.html"/>
 <mapID target="chirp" url="chirp.html"/>
+<mapID target="circshift" url="circshift.html"/>
 <mapID target="cl2bp" url="cl2bp.html"/>
 <mapID target="clustersegment" url="clustersegment.html"/>
 <mapID target="cmorwavf" url="cmorwavf.html"/>

@@ -42,6 +42,7 @@
 <!ENTITY a5964bee8d5e8ebe94ef7903093763047 SYSTEM "/home/sonu/Desktop/FOSSEE-Signal-Processing-Toolbox-master/help/en_US/cheby2.xml">
 <!ENTITY a75ad45e97ba8cd384e0e66878ad96e1f SYSTEM "/home/sonu/Desktop/FOSSEE-Signal-Processing-Toolbox-master/help/en_US/check.xml">
 <!ENTITY a772ccff56ab57e226641fbf82aca7a14 SYSTEM "/home/sonu/Desktop/FOSSEE-Signal-Processing-Toolbox-master/help/en_US/chirp.xml">
+<!ENTITY a19780c33c4684d6ac4ae0f031a9acaa6 SYSTEM "/home/sonu/Desktop/FOSSEE-Signal-Processing-Toolbox-master/help/en_US/circshift.xml">
 <!ENTITY abaedf205cfaf60bd4b4b25e8595b7ad5 SYSTEM "/home/sonu/Desktop/FOSSEE-Signal-Processing-Toolbox-master/help/en_US/cl2bp.xml">
 <!ENTITY aeee60aeb7a1b17d0a6cdb4a3420970a5 SYSTEM "/home/sonu/Desktop/FOSSEE-Signal-Processing-Toolbox-master/help/en_US/clustersegment.xml">
 <!ENTITY adf9a50a2c91c5066ae15a012078f1ddc SYSTEM "/home/sonu/Desktop/FOSSEE-Signal-Processing-Toolbox-master/help/en_US/cmorwavf.xml">
@@ -338,6 +339,7 @@
 &a5964bee8d5e8ebe94ef7903093763047;
 &a75ad45e97ba8cd384e0e66878ad96e1f;
 &a772ccff56ab57e226641fbf82aca7a14;
+&a19780c33c4684d6ac4ae0f031a9acaa6;
 &abaedf205cfaf60bd4b4b25e8595b7ad5;
 &aeee60aeb7a1b17d0a6cdb4a3420970a5;
 &adf9a50a2c91c5066ae15a012078f1ddc;

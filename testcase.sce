@@ -1,4 +1,4 @@
-exec FOSSEE_Scilab_Octave_Interface_Toolbox/loader.sce
+//exec FOSSEE_Scilab_Octave_Interface_Toolbox/loader.sce
 
 exec loader.sce
 exec builder.sce
@@ -162,6 +162,24 @@ if(y == fscanfMat("macros/medfilt1op.txt"))
 	disp("medfilt1 Test failed")
 end
 
+/////////////////////////////////////////////
+
+
+/////////Test case for       41) movingrms                  //////////
+
+
+[a,b]=movingrms ([4.4 94 1;-2 5*%i 5],1,-2)
+
+b = round(b*10000)/10000
+
+if(b == [0.1888 ; 0.1888])
+           test_pass=[test_pass,1]
+    else
+	test_pass=[test_pass,0]
+	disp("movingrms Test failed")
+end
+
+
 
 /////////////////////////////////////////////
 
@@ -213,47 +231,37 @@ if(p == 0.1502)
 end
 
 
-//
-///////////////////////////////////////////////
-//
-//
-///////////Test case for       10)iscatastrophic                  //////////
-//
-//   eg_1.numInputSymbols = 4;
-//   eg_1.numOutputSymbols = 4;
-//   eg_1.numStates = 3;
-//   eg_1.nextStates = [0 1 2 1;0 1 2 1; 0 1 2 1];
-//   eg_1.outputs = [0 0 1 1;1 1 2 1; 1 0 1 1];
-//
-//  res_c_eg_1=iscatastrophic(eg_1)
-//
-//
-//if(res_c_eg_1==0)
-//           test_pass=[test_pass,1]
-//else
-//	test_pass=[test_pass,0]
-//	disp("iscatastrophic Test failed")
-//end
-//
-///////////////////////////////////////////////
-//
-//
-//
-///////////Test case for       11)iqimbal2coef                  //////////
-//
-//
-//ampImb = 2;      // dB
-//phImb = 15;      // degrees
-//
-//compcoef = iqimbal2coef(ampImb,phImb)
-//compcoef=roundn(compcoef,4)
-//
-//if(compcoef==[-0.1126+0.1334*%i 0])
-//           test_pass=[test_pass,1]
-//else
-//	test_pass=[test_pass,0]
-//	disp("Iqimbal2coef Test failed")
-//end
+
+/////////////////////////////////////////////
+
+
+/////////Test case for       sigmoid_train                  //////////
+
+s = sigmoid_train(0.1,[1:3],4)
+s = round(s*10000)/10000
+
+if(s == 0.2737)
+           test_pass=[test_pass,1]
+else
+	test_pass=[test_pass,0]
+	disp("sigmoid_train Test failed")
+end
+
+/////////////////////////////////////////////
+
+
+
+/////////Test case for       circshift                  /////////
+
+ M = [1 2 3 4];
+ R = circshift(M, [0 1])
+
+if(R == [4 1 2 3])
+           test_pass=[test_pass,1]
+else
+	test_pass=[test_pass,0]
+	disp("circshift failed")
+end
 //
 ///////////////////////////////////////////////
 //

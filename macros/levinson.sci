@@ -11,7 +11,6 @@
 //e is the prediction error when order is n
 // k is a column vector containing the reflection coefficients of length n
 
-// Author Debdeep Dey
 
 //Example : 
 //a = [1 0.1 -0.8];       //Estimate the coefficients of an autoregressive process given by    x(n) = 0.1x(n-1) - 0.8x(n-2) + w(n)
@@ -28,11 +27,14 @@
 // // Output :---
 // ar  =
 // 
-//    1.    0.1031765  - 0.8008402  
+//    1.    0.0983843  - 0.7929775    
 //
 
-
-function [a, v_f, ref_f] = levinson (acf, p)
+//**************************************************************************************************
+//______________________________________________version1 code (not working)_________________________
+//__________________________________________________________________________________________________
+//**************************************************************************************************
+//function [a, v_f, ref_f] = levinson (acf, p)
 
 //if ( argn(2)<1 )
 //    error("Too few input arguments");
@@ -98,7 +100,59 @@ function [a, v_f, ref_f] = levinson (acf, p)
 //    end
 //end
 
-[a, v_f, ref_f ] = callOctave("levinson",acf, p)
-funcprot(0);
+//
+//endfunction
+
+
+//**************************************************************************************************
+//______________________________________________version2 code ( working)____________________________
+//__________________________________________________________________________________________________
+//**************************************************************************************************
+
+
+function [a, v, ref] = levinson(bcf, p)
+    
+    funcprot(0);
+    
+    
+  nargin = argn(2);
+  nargout = argn(1);
+  [rows columns] = size(bcf)
+  
+  if ( nargin<1 )
+    error("Wrong input argument ");
+  elseif( ~isvector(bcf) | length(bcf)<2 )
+    error( "levinson: arg 1 (bcf) must be vector of length >1\n");
+  elseif ( nargin>1 & ( ~isscalar(p) | fix(p)~=p ) )
+    error( "levinson: arg 2 (p) must be integer >0\n");
+  else
+    if ((nargin == 1)|(p>=length(bcf))) p = length(bcf) - 1; end
+    if( columns >1 ) bcf=bcf(:); end
+
+    if nargout < 3 & p < 100
+//      ## direct solution [O(p^3), but no loops so slightly faster for small p]
+//      ##   Kay & Marple Eqn (2.39)
+      R = toeplitz(bcf(1:p), conj(bcf(1:p)));
+      a = R \ -bcf(2:p+1);
+      a = [ 1, a.' ];
+      v = real( a*conj(bcf(1:p+1)) );
+    else
+//      ## durbin-levinson [O(p^2), so significantly faster for large p]
+//      ##   Kay & Marple Eqns (2.42-2.46)
+      ref = zeros(p,1);
+      g = -bcf(2)/bcf(1);
+      a = [ g ];
+      v = real( ( 1 - g*conj(g)) * bcf(1) );
+      ref(1) = g;
+      for t = 2 : p
+        g = -(bcf(t+1) + a * bcf(t:-1:2)) / v;
+        a = [ a+g*conj(a(t-1:-1:1)), g ];
+        v = v * ( 1 - real(g*conj(g)) ) ;
+        ref(t) = g;
+      end
+      a = [1, a];
+    end
+  end
+  
 
 endfunction

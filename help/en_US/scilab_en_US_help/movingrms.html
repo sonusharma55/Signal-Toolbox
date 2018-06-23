@@ -33,37 +33,35 @@
 
     <br /><br />
     <div class="refnamediv"><h1 class="refname">movingrms</h1>
-    <p class="refpurpose"></p></div>
+    <p class="refpurpose">Find moving RMS value of signal in x</p>
+    <p class="para"></p></div>
 
 
 <div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
-   <div class="synopsis"><pre><span class="default">[</span><span class="default">rmsx</span><span class="default">,</span><span class="default">w</span><span class="default">]=</span><span class="functionid">movingrms</span><span class="default">(</span><span class="default">x</span><span class="default">,</span><span class="default">w</span><span class="default">,</span><span class="default">rc</span><span class="default">,</span><span class="default">Fs</span><span class="default">=1)</span></pre></div></div>
+   <div class="synopsis"><pre><span class="default">[</span><span class="default">rmsx</span><span class="default">,</span><span class="default">w</span><span class="default">]=</span><span class="functionid">movingrms</span><span class="default">(</span><span class="default">x</span><span class="default">,</span><span class="default">width</span><span class="default">,</span><span class="default">risetime</span><span class="default">)</span>
+<span class="default">[</span><span class="default">rmsx</span><span class="default">,</span><span class="default">w</span><span class="default">]=</span><span class="functionid">movingrms</span><span class="default">(</span><span class="default">x</span><span class="default">,</span><span class="default">width</span><span class="default">,</span><span class="default">risetime</span><span class="default">,</span><span class="default">Fs</span><span class="default">)</span></pre></div>
+    <p class="para"></p></div>
 
 <div class="refsection"><h3 class="title">Parameters</h3>
    <dl><dt><span class="term">x:</span>
-      <dd><p class="para">Real or complex valued vector or matrix</p></dd></dt>
-   <dt><span class="term">w:</span>
+      <dd><p class="para">(Real or complex valued vector or matrix) Input signal samples</p></dd></dt>
+   <dt><span class="term">width:</span>
       <dd><p class="para">Real or complex scalar value</p></dd></dt>
-   <dt><span class="term">rc:</span>
+   <dt><span class="term">risetime:</span>
       <dd><p class="para">Real or complex scalar value</p></dd></dt>
    <dt><span class="term">Fs:</span>
-      <dd><p class="para">Real or complex scalar value</p></dd></dt></dl></div>
+      <dd><p class="para">(Real or complex scalar value) Smapling frequency</p></dd></dt></dl>
+    <p class="para"></p></div>
 
 <div class="refsection"><h3 class="title">Description</h3>
-   <p class="para">This is an Octave function.
-The signal is convoluted against a sigmoid window of width w and risetime rc with the units of these parameters relative to the value of the sampling frequency given in Fs (Default value=1).</p></div>
+   <p class="para">In this function signal is convoluted against a sigmoid window of width w and risetime rc with the units of these parameters relative to the value of the sampling frequency given in Fs (Default value=1).</p>
+    <p class="para"></p></div>
 
-<div class="refsection"><h3 class="title">Examples</h3>
-   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabnumber">1.</span>    <span class="scilabopenclose">[</span><span class="scilabid">a</span><span class="scilabdefault">,</span><span class="scilabid">b</span><span class="scilabopenclose">]</span><span class="scilaboperator">=</span><span class="scilabid">movingrms</span> <span class="scilabopenclose">(</span><span class="scilabopenclose">[</span><span class="scilabnumber">4.4</span> <span class="scilabnumber">94</span> <span class="scilabnumber">1</span><span class="scilabdefault">;</span><span class="scilaboperator">-</span><span class="scilabnumber">2</span> <span class="scilabnumber">5</span><span class="scilabid">i</span> <span class="scilabnumber">5</span><span class="scilabopenclose">]</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span>
-<span class="scilabid">a</span> <span class="scilaboperator">=</span>    <span class="scilabnumber">0.91237</span>   <span class="scilabnumber">17.71929</span>    <span class="scilabnumber">0.96254</span>
-<span class="scilabnumber">0.91237</span>   <span class="scilabnumber">17.71929</span>    <span class="scilabnumber">0.96254</span>
-<span class="scilabid">b</span> <span class="scilaboperator">=</span>   <span class="scilabnumber">0.18877</span>
-<span class="scilabnumber">0.18877</span>
-<span class="scilabnumber">2.</span>    <span class="scilabopenclose">[</span><span class="scilabid">a</span><span class="scilabdefault">,</span><span class="scilabid">b</span><span class="scilabopenclose">]</span><span class="scilaboperator">=</span><span class="scilabid">movingrms</span> <span class="scilabopenclose">(</span><span class="scilabopenclose">[</span><span class="scilabnumber">4.4</span> <span class="scilabnumber">94</span> <span class="scilabnumber">1</span><span class="scilabdefault">;</span><span class="scilaboperator">-</span><span class="scilabnumber">2</span> <span class="scilabnumber">5</span><span class="scilabid">i</span> <span class="scilabnumber">5</span><span class="scilabopenclose">]</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span>
-<span class="scilabid">a</span> <span class="scilaboperator">=</span>   <span class="scilabnumber">4.8332</span>   <span class="scilabnumber">93.8669</span>    <span class="scilabnumber">5.0990</span>
-<span class="scilabnumber">4.8332</span>   <span class="scilabnumber">93.8669</span>    <span class="scilabnumber">5.0990</span>
-<span class="scilabid">b</span> <span class="scilaboperator">=</span>   <span class="scilabnumber">1</span>
-<span class="scilabnumber">1</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+<div class="refsection"><h3 class="title">Example : 1</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabopenclose">[</span><span class="scilabid">a</span><span class="scilabdefault">,</span><span class="scilabid">b</span><span class="scilabopenclose">]</span><span class="scilaboperator">=</span><span class="scilabid">movingrms</span> <span class="scilabopenclose">(</span><span class="scilabopenclose">[</span><span class="scilabnumber">4.4</span> <span class="scilabnumber">94</span> <span class="scilabnumber">1</span><span class="scilabdefault">;</span><span class="scilaboperator">-</span><span class="scilabnumber">2</span> <span class="scilabnumber">5</span><span class="scilaboperator">*</span><span class="scilabconstants">%i</span> <span class="scilabnumber">5</span><span class="scilabopenclose">]</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span> <span class="scilabcomment">// moving rms with default value of Fs = 1</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div>
+
+<h3 class="title">Example : 2</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabopenclose">[</span><span class="scilabid">a</span><span class="scilabdefault">,</span><span class="scilabid">b</span><span class="scilabopenclose">]</span><span class="scilaboperator">=</span><span class="scilabid">movingrms</span> <span class="scilabopenclose">(</span><span class="scilabopenclose">[</span><span class="scilabnumber">4.4</span> <span class="scilabnumber">94</span> <span class="scilabnumber">1</span><span class="scilabdefault">;</span><span class="scilaboperator">-</span><span class="scilabnumber">2</span> <span class="scilabnumber">5</span><span class="scilaboperator">*</span><span class="scilabconstants">%i</span> <span class="scilabnumber">5</span><span class="scilabopenclose">]</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabcomment">// moving rms with value of Fs = 2</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
     <br />
 
     <div class="manualnavbar">

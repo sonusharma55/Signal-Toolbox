@@ -44,6 +44,7 @@
 <tocitem target="cheby2" text="cheby2"/>
 <tocitem target="check" text="check"/>
 <tocitem target="chirp" text="chirp"/>
+<tocitem target="circshift" text="circshift"/>
 <tocitem target="cl2bp" text="cl2bp"/>
 <tocitem target="clustersegment" text="clustersegment"/>
 <tocitem target="cmorwavf" text="cmorwavf"/>
