@@ -11,6 +11,18 @@ test_pass=[]
 res=[]
 
 
+/////////Test case for       2) arburg                  //////////
+
+a = arburg([1,2,3,4,5],2);
+a = round(a*10000)/10000;
+
+if(a == [1.  -1.8639    0.9571])
+    test_pass=[test_pass,1]
+else
+    test_pass=[test_pass,0]
+    disp("arburg test failed")
+end
+
 /////////Test case for       28) isfir                  //////////
 
 fir = isfir([1 -1 1], 1)
