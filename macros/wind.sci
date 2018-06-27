@@ -1,8 +1,8 @@
-function [w] = window (f, m, varargin)
+function [w] = wind(f, m, varargin)
 //This function creates an m-point window from the function f given as input.
 //Calling Sequence
-//w = window(f, m)
-//w = window(f, m, opts)
+//w = wind(f, m)
+//w = wind(f, m, opts)
 //Parameters 
 //f: string value
 //m: positive integer value
@@ -13,7 +13,7 @@ function [w] = window (f, m, varargin)
 //This function creates an m-point window from the function f given as input, in the output vector w.
 //f can take any valid function as a string, for example "blackmanharris".
 //Examples
-//window("hanning",5)
+//wind("hanning",5)
 //ans  = 
 //    0.   
 //    0.5  

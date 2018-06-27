@@ -264,7 +264,7 @@ var
 vco
 wconv
 welchwin
-window
+wind
 wkeep
 wrev
 xcorr1

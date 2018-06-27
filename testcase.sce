@@ -235,7 +235,7 @@ end
 /////////////////////////////////////////////
 
 
-/////////Test case for       sigmoid_train                  //////////
+/////////Test case for       **)sigmoid_train                  //////////
 
 s = sigmoid_train(0.1,[1:3],4)
 s = round(s*10000)/10000
@@ -251,7 +251,7 @@ end
 
 
 
-/////////Test case for       circshift                  /////////
+/////////Test case for       **)circshift                  /////////
 
  M = [1 2 3 4];
  R = circshift(M, [0 1])
@@ -262,25 +262,22 @@ else
 	test_pass=[test_pass,0]
 	disp("circshift failed")
 end
-//
-///////////////////////////////////////////////
-//
-//
-//
-///////////Test case for       12)iqcoef2imbal                 //////////
-//
-//x=[4 2 complex(-0.1145,0.1297) complex(-0.0013,0.0029)];
-//
-//[a_imb_db,ph_imb_deq] = iqcoef2imbal(x);
-//a_imb_db=roundn(a_imb_db,4);
-//ph_imb_deq=roundn(ph_imb_deq,4)
-//
-//if(a_imb_db==[4.437 9.5424 2.0319 0.0226] &ph_imb_deq==[180 180 14.5877 0.3323])
-//           test_pass=[test_pass,1]
-//else
-//	test_pass=[test_pass,0]
-//	disp("Iqcoef2imbal Test failed")
-//end
+
+/////////////////////////////////////////////
+
+
+
+/////////Test case for       **)kaiser                 //////////
+
+win = kaiser(6, 0.2) ;
+win = round(win*10000)/10000;
+
+if(win == [ 0.9901; 0.9964; 0.9996; 0.9996; 0.9964; 0.9901 ])
+           test_pass=[test_pass,1]
+else
+	test_pass=[test_pass,0]
+	disp("Iqcoef2imbal Test failed")
+end
 //
 ///////////////////////////////////////////////
 //

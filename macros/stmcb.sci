@@ -1,4 +1,5 @@
 //Compute linear model using Steiglitz-McBride iteration
+
 //calling syntax
 //[b,a] = stmcb(h,nb,na)
 //[b,a] = stmcb(y,x,nb,na)
@@ -6,12 +7,19 @@
 //[b,a] = stmcb(y,x,nb,na,niter)
 //[b,a] = stmcb(h,nb,na,niter,ai)
 //[b,a] = stmcb(y,x,nb,na,niter,ai)
+
+//Parameters : 
 //b,a : coefficients of the system b(z)/a(z)
 //h:impulse response of the system
 //x,y: input and output of same length given to the system
 //niter: no of iterations
 //ai:initial estimate of the denominator coefficients
 //Accepts only real i/ps , imaginary i/ps are not accepted due to limitations of the 'filter' function in Scilab
+
+//Example 
+//
+
+
 function [b,a] = stmcb( x, u_in, q, p, niter, a_in )
     
      narginchk(3, 6, argn(2));

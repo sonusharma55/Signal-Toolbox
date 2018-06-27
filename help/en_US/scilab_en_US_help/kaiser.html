@@ -54,14 +54,9 @@ This function returns the filter coefficients of a Kaiser window of length m sup
 The second parameter gives the stop band attenuation of the Fourier transform of the window on derivation.</p></div>
 
 <div class="refsection"><h3 class="title">Examples</h3>
-   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">kaiser</span><span class="scilabopenclose">(</span><span class="scilabnumber">6</span><span class="scilabdefault">,</span><span class="scilabnumber">0.2</span><span class="scilabopenclose">)</span>
-<span class="scilabid">ans</span>  <span class="scilaboperator">=</span>
-<span class="scilabnumber">0.9900745</span>
-<span class="scilabnumber">0.9964211</span>
-<span class="scilabnumber">0.9996020</span>
-<span class="scilabnumber">0.9996020</span>
-<span class="scilabnumber">0.9964211</span>
-<span class="scilabnumber">0.9900745</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">L</span> <span class="scilaboperator">=</span> <span class="scilabnumber">6</span> <span class="scilabdefault">;</span>
+<a class="scilabcommand" href="scilab://beta">beta</a> <span class="scilabstring">=</span> <span class="scilabstring">0.2</span> <span class="scilabdefault">;</span>
+<span class="scilabid">kaiser</span><span class="scilabopenclose">(</span><span class="scilabid">L</span><span class="scilabdefault">,</span> <a class="scilabcommand" href="scilab://beta">beta</a><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
     <br />
 
     <div class="manualnavbar">

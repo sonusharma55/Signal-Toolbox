@@ -32,7 +32,32 @@
 
     <br /><br />
     <div class="refnamediv"><h1 class="refname">zplane</h1>
-    <p class="refpurpose">funcprot(0);</p></div>
+    <p class="refpurpose">Pole-Zero plot for Discrete time systems</p>
+    <p class="para"></p></div>
+
+
+<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
+   <div class="synopsis"><pre><span class="functionid">zplane</span><span class="default">(</span><span class="default">z</span><span class="default">);</span>
+<span class="functionid">zplane</span><span class="default">(</span><span class="default">z</span><span class="default">,</span><span class="default">p</span><span class="default">);</span></pre></div>
+   <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para">This function gives pole zero plote of discrete time systems</p>
+   <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Parameters</h3>
+   <dl><dt><span class="term">z</span>
+      <dd><p class="para">: vector containing numerator coefficients</p></dd></dt>
+   <dt><span class="term">p</span>
+      <dd><p class="para">: vector containing denumerator coefficients</p></dd></dt></dl>
+   <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">z</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span> <span class="scilabnumber">2</span> <span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">p</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">4</span> <span class="scilabnumber">5</span> <span class="scilabnumber">6</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">zplane</span><span class="scilabopenclose">(</span><span class="scilabid">z</span><span class="scilabdefault">,</span><span class="scilabid">p</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div>
+
+<img src='./zplane_1.png'/></div>
     <br />
 
     <div class="manualnavbar">
