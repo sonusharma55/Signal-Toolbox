@@ -276,29 +276,25 @@ if(win == [ 0.9901; 0.9964; 0.9996; 0.9996; 0.9964; 0.9901 ])
            test_pass=[test_pass,1]
 else
 	test_pass=[test_pass,0]
-	disp("Iqcoef2imbal Test failed")
+	disp("kaiser Test failed")
 end
-//
-///////////////////////////////////////////////
-//
-//
-///////////Test case for       13)lteZadoffChuSeq                 //////////
-//
-//a=25;
-//b=139;
-//
-//seq = lteZadoffChuSeq(a,b);
-//seq=roundn(seq,3);
-//
-//M1=fscanfMat("txt1_ltezadoffchuseq");
-//M2=fscanfMat("txt2_ltezadoffchuseq");
-//
-//if(real(seq)==M1 & imag(seq)==M2) 
-//           test_pass=[test_pass,1]
-//else
-//	test_pass=[test_pass,0]
-//	disp("iteZadoffChuSeq Test failed")
-//end
+
+/////////////////////////////////////////////
+
+
+/////////Test case for       78)stmcb                 //////////
+
+ 
+h = fscanfMat("macros/stmcb_h_data.txt");
+H = stmcb(h,4,4);
+H = round(H*10000)/10000;
+
+if(H == [0.0003    0.001    0.0147  -0.0078    0.0317]) 
+           test_pass=[test_pass,1]
+else
+	test_pass=[test_pass,0]
+	disp("stmcb Test failed")
+end
 //
 ///////////////////////////////////////////////
 //

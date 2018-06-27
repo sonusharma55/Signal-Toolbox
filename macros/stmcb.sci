@@ -9,7 +9,7 @@
 //[b,a] = stmcb(y,x,nb,na,niter,ai)
 
 //Parameters : 
-//b,a : coefficients of the system b(z)/a(z)
+//b,a : coefficients of the system function,nb is number of zeros and na is number of poles
 //h:impulse response of the system
 //x,y: input and output of same length given to the system
 //niter: no of iterations
@@ -17,7 +17,13 @@
 //Accepts only real i/ps , imaginary i/ps are not accepted due to limitations of the 'filter' function in Scilab
 
 //Example 
-//
+//h = fscanfMat("macros/stmcb_h_data.txt");
+//stmcb(h,4,4)
+//Output :
+// ans  =
+// 
+//    0.0003    0.0010284    0.0147159  - 0.0077914    0.0316548  
+
 
 
 function [b,a] = stmcb( x, u_in, q, p, niter, a_in )

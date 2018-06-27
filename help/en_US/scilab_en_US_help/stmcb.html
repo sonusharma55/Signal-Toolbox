@@ -33,7 +33,45 @@
 
     <br /><br />
     <div class="refnamediv"><h1 class="refname">stmcb</h1>
-    <p class="refpurpose">function [b,a] = stmcb( x, u_in, q, p, niter, a_in )</p></div>
+    <p class="refpurpose">Compute linear model using Steiglitz-McBride iteration</p>
+    <p class="para"></p></div>
+
+
+<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
+   <div class="synopsis"><pre><span class="default">[</span><span class="default">b</span><span class="default">,</span><span class="default">a</span><span class="default">] = </span><span class="functionid">stmcb</span><span class="default">(</span><span class="default">h</span><span class="default">,</span><span class="default">nb</span><span class="default">,</span><span class="default">na</span><span class="default">)</span>
+<span class="default">[</span><span class="default">b</span><span class="default">,</span><span class="default">a</span><span class="default">] = </span><span class="functionid">stmcb</span><span class="default">(</span><span class="default">y</span><span class="default">,</span><span class="default">x</span><span class="default">,</span><span class="default">nb</span><span class="default">,</span><span class="default">na</span><span class="default">)</span>
+<span class="default">[</span><span class="default">b</span><span class="default">,</span><span class="default">a</span><span class="default">] = </span><span class="functionid">stmcb</span><span class="default">(</span><span class="default">h</span><span class="default">,</span><span class="default">nb</span><span class="default">,</span><span class="default">na</span><span class="default">,</span><span class="default">niter</span><span class="default">)</span>
+<span class="default">[</span><span class="default">b</span><span class="default">,</span><span class="default">a</span><span class="default">] = </span><span class="functionid">stmcb</span><span class="default">(</span><span class="default">y</span><span class="default">,</span><span class="default">x</span><span class="default">,</span><span class="default">nb</span><span class="default">,</span><span class="default">na</span><span class="default">,</span><span class="default">niter</span><span class="default">)</span>
+<span class="default">[</span><span class="default">b</span><span class="default">,</span><span class="default">a</span><span class="default">] = </span><span class="functionid">stmcb</span><span class="default">(</span><span class="default">h</span><span class="default">,</span><span class="default">nb</span><span class="default">,</span><span class="default">na</span><span class="default">,</span><span class="default">niter</span><span class="default">,</span><span class="default">ai</span><span class="default">)</span>
+<span class="default">[</span><span class="default">b</span><span class="default">,</span><span class="default">a</span><span class="default">] = </span><span class="functionid">stmcb</span><span class="default">(</span><span class="default">y</span><span class="default">,</span><span class="default">x</span><span class="default">,</span><span class="default">nb</span><span class="default">,</span><span class="default">na</span><span class="default">,</span><span class="default">niter</span><span class="default">,</span><span class="default">ai</span><span class="default">)</span></pre></div>
+   <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Parameters</h3>
+   <dl><dt><span class="term">b,a</span>
+      <dd><p class="para">: coefficients of the system function,nb is number of zeros and na is number of poles</p></dd></dt>
+   <dt><span class="term">h</span>
+      <dd><p class="para">: impulse response of the system</p></dd></dt>
+   <dt><span class="term">x, y</span>
+      <dd><p class="para">: input and output of same length given to the system</p></dd></dt>
+   <dt><span class="term">nitren</span>
+      <dd><p class="para">: number of iterations</p></dd></dt>
+   <dt><span class="term">ai</span>
+      <dd><p class="para">: initial estimate of the denominator coefficients</p></dd></dt>
+      <p class="para"></p>  
+      <p class="para">Accepts only real i/ps, complex i/ps are not accepted due to limitations of the &#0039;filter&#0039; function in Scilab</p></dl>
+   <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">h</span> <span class="scilaboperator">=</span> <a class="scilabcommand" href="scilab://fscanfMat">fscanfMat</a><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">macros/stmcb_h_data.txt</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">//required impulse response samples</span>
+<a class="scilabmacro" href="scilab://plot">plot</a><span class="scilabopenclose">(</span><span class="scilabid">h</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">//plotting required impulse response</span>
+<a class="scilabmacro" href="scilab://title">title</a> <span class="scilabstring">"Required</span> <span class="scilabstring">impulse</span> <span class="scilabstring">respose</span> <span class="scilabstring">(h)</span> <span class="scilabstring">plot</span> <span class="scilabstring">"</span>
+<a class="scilabmacro" href="scilab://xlabel">xlabel</a> <span class="scilabstring">"samples</span> <span class="scilabstring">(n)"</span>
+<a class="scilabmacro" href="scilab://ylabel">ylabel</a> <span class="scilabstring">"magnitude</span> <span class="scilabstring">{h(n)}</span> <span class="scilabstring">"</span>
+<span class="scilabid">nb</span> <span class="scilaboperator">=</span> <span class="scilabnumber">4</span> <span class="scilabdefault">;</span> <span class="scilabcomment">// four zeros</span>
+<span class="scilabid">na</span> <span class="scilaboperator">=</span> <span class="scilabnumber">4</span> <span class="scilabdefault">;</span> <span class="scilabcomment">//four poles</span>
+<span class="scilabid">stmcb</span><span class="scilabopenclose">(</span><span class="scilabid">h</span><span class="scilabdefault">,</span><span class="scilabid">nb</span><span class="scilabdefault">,</span><span class="scilabid">na</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div>
+
+<img src='./stmcb_1.png'/></div>
     <br />
 
     <div class="manualnavbar">
