@@ -46,19 +46,21 @@
       <dd><p class="para">vector of real or complex numbers, length &gt; 2</p></dd></dt>
    <dt><span class="term">p:</span>
       <dd><p class="para">positive integer value &lt; length(x) - 1</p></dd></dt>
-   <dt><span class="term">a, v, k:</span>
-      <dd><p class="para">Output variables</p></dd></dt></dl></div>
+   <dt><span class="term">a:</span>
+      <dd><p class="para">gives the AR coefficients</p></dd></dt>
+   <dt><span class="term">v:</span>
+      <dd><p class="para">gives the variance of the white noise,</p></dd></dt>
+   <dt><span class="term">k:</span>
+      <dd><p class="para">gives the reflection coefficients to be used in the lattice filter</p></dd></dt></dl></div>
 
 <div class="refsection"><h3 class="title">Description</h3>
-   <p class="para">This is an Octave function.</p>
    <p class="para">This function fits an AR (p)-model with Yule-Walker estimates.
-The first argument is the data vector which is to be estimated.
-Output variable a gives the AR coefficients, v gives the variance of the white noise and k gives the reflection coefficients to be used in the lattice filter.</p></div>
+The first argument is the data vector which is to be estimated.</p></div>
 
 <div class="refsection"><h3 class="title">Examples</h3>
-   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">aryule</span><span class="scilabopenclose">(</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabdefault">,</span><span class="scilabnumber">5</span><span class="scilabopenclose">]</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span>
-<span class="scilabid">ans</span>  <span class="scilaboperator">=</span>
-<span class="scilabnumber">1.</span>  <span class="scilaboperator">-</span> <span class="scilabnumber">0.8140351</span>    <span class="scilabnumber">0.1192982</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">x</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabdefault">,</span><span class="scilabnumber">5</span><span class="scilabopenclose">]</span> <span class="scilabdefault">;</span>
+<span class="scilabid">poles</span> <span class="scilaboperator">=</span> <span class="scilabnumber">2</span> <span class="scilabdefault">;</span>
+<span class="scilabid">arburg</span><span class="scilabopenclose">(</span><span class="scilabid">x</span><span class="scilabdefault">,</span><span class="scilabid">poles</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
     <br />
 
     <div class="manualnavbar">

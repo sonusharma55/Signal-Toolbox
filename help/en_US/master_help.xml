@@ -61,6 +61,7 @@
 <!ENTITY a21afc54c528a00d74a58d0b086c04e0f SYSTEM "/home/sonu/Desktop/FOSSEE-Signal-Processing-Toolbox-master/help/en_US/detrend1.xml">
 <!ENTITY ad450c80621382637fe598e09154abbb9 SYSTEM "/home/sonu/Desktop/FOSSEE-Signal-Processing-Toolbox-master/help/en_US/dftmtx.xml">
 <!ENTITY a977741e6037775bed2f9c021e912f656 SYSTEM "/home/sonu/Desktop/FOSSEE-Signal-Processing-Toolbox-master/help/en_US/diffpara.xml">
+<!ENTITY a5366a080357ad6723d87bc44442d18e4 SYSTEM "/home/sonu/Desktop/FOSSEE-Signal-Processing-Toolbox-master/help/en_US/digitrevorder.xml">
 <!ENTITY a00f76a17b3ed7c11ac43965d429e036a SYSTEM "/home/sonu/Desktop/FOSSEE-Signal-Processing-Toolbox-master/help/en_US/diric.xml">
 <!ENTITY ab9735f6f159af99234cb756fdc2b89bf SYSTEM "/home/sonu/Desktop/FOSSEE-Signal-Processing-Toolbox-master/help/en_US/downsample.xml">
 <!ENTITY adcc2f2cd0a00ca27e2614e1cc563f1c7 SYSTEM "/home/sonu/Desktop/FOSSEE-Signal-Processing-Toolbox-master/help/en_US/dst1.xml">
@@ -358,6 +359,7 @@
 &a21afc54c528a00d74a58d0b086c04e0f;
 &ad450c80621382637fe598e09154abbb9;
 &a977741e6037775bed2f9c021e912f656;
+&a5366a080357ad6723d87bc44442d18e4;
 &a00f76a17b3ed7c11ac43965d429e036a;
 &ab9735f6f159af99234cb756fdc2b89bf;
 &adcc2f2cd0a00ca27e2614e1cc563f1c7;

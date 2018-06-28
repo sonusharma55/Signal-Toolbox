@@ -63,6 +63,7 @@
 <mapID target="detrend1" url="detrend1.html"/>
 <mapID target="dftmtx" url="dftmtx.html"/>
 <mapID target="diffpara" url="diffpara.html"/>
+<mapID target="digitrevorder" url="digitrevorder.html"/>
 <mapID target="diric" url="diric.html"/>
 <mapID target="downsample" url="downsample.html"/>
 <mapID target="dst1" url="dst1.html"/>

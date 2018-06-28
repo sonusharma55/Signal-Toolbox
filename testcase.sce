@@ -23,6 +23,43 @@ else
     disp("arburg test failed")
 end
 
+/////////Test case for       4) aryule                  //////////
+
+a = aryule([1,2,3,4,5],2);
+a = round(a*10000)/10000;
+
+if(a == [1.  -0.814    0.1193])
+    test_pass=[test_pass,1]
+else
+    test_pass=[test_pass,0]
+    disp("aryule test failed")
+end
+
+/////////Test case for       5) bitrevorder                  //////////
+
+x = [%i,1,3,6*%i] ;
+[y i]=bitrevorder(x);
+
+if(y == [%i   3   1   6*%i] & i == [1 3 2 4])
+    test_pass=[test_pass,1]
+else
+    test_pass=[test_pass,0]
+    disp("bitrevorder test failed")
+end
+
+/////////Test case for       **) digitrevorder                  //////////
+
+x = [%i,1,3,6*%i] ;
+b = 2;
+[y i]=digitrevorder(x,b);
+
+if(y == [%i   3   1   6*%i] & i == [1 3 2 4])
+    test_pass=[test_pass,1]
+else
+    test_pass=[test_pass,0]
+    disp("digitrevorder test failed")
+end
+
 /////////Test case for       28) isfir                  //////////
 
 fir = isfir([1 -1 1], 1)
