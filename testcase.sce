@@ -344,58 +344,69 @@ else
 	test_pass=[test_pass,0]
 	disp("stmcb Test failed")
 end
-//
-///////////////////////////////////////////////
-//
-//
-///////////Test case for       14)ssbmod                 //////////
-//
-//Fs =50;
-//t = [0:2*Fs+1]'/Fs;
-//ini_phase = 5;
-//Fc = 20;
-//fm1= 2;
-//fm2= 3;
-//x =sin(2*fm1*%pi*t)+cos(2*fm2*%pi*t);    //message signal
-//
-//y = ssbmod(x,Fc,Fs,ini_phase);
-//y=roundn(y,4);
-//
-//M=fscanfMat("txt3_ssbmod");
-//
-//if(y==M) 
-//           test_pass=[test_pass,1]
-//else
-//	test_pass=[test_pass,0]
-//	disp("ssbmod Test failed")
-//end
-//
-///////////////////////////////////////////////
-//
-//
-//
-///////////Test case for       14)ssbdemod                 //////////
-//
-//Fs =50;
-//t = [0:2*Fs+1]'/Fs;
-//ini_phase = 5;
-//Fc = 20;
-//fm1= 2;
-//fm2= 3;
-//x =sin(2*fm1*%pi*t)+cos(2*fm2*%pi*t);    //message signal
-//y = ssbmod(x,Fc,Fs,ini_phase);  //modulated signal
-//
-//o = ssbdemod(y,Fc,Fs,ini_phase); 
-//o = roundn(o,4);
-//
-//M=fscanfMat("txt4_ssbdemod");
-//
-//if(o==M) 
-//           test_pass=[test_pass,1]
-//else
-//	test_pass=[test_pass,0]
-//	disp("ssbdemod Test failed")
-//end
+
+/////////////////////////////////////////////
+
+
+/////////Test case for       autoreg_matrix                 //////////
+m = autoreg_matrix([1,2,3],2);
+
+if(m == [1 0 0; 1 1 0; 1 2 1]) 
+           test_pass=[test_pass,1]
+else
+	test_pass=[test_pass,0]
+	disp("autoreg_matrix test failed")
+end
+
+/////////////////////////////////////////////
+
+
+
+/////////Test case for       arch_rnd                 //////////
+
+a = [1 2 3 4 5];
+b = [7 8 9 10];
+t = 5 ;
+m = arch_rnd (a, b, t);
+m = round(m*1000)/1000
+
+if(m == [    7.476      
+    67.124     
+    671.105    
+    7382.441   
+    80409.121  ]) 
+           test_pass=[test_pass,1]
+else
+	test_pass=[test_pass,0]
+	disp("arch_rnd Test failed")
+end
+
+/////////////////////////////////////////////
+
+
+
+/////////Test case for       arma_rnd                 //////////
+
+a = [1 2 3 4 5];
+b = [7; 8; 9; 10; 11];
+t = 5 ;
+v = 10 ;
+n = 100 ;
+m = arma_rnd (a, b, v, t, n);
+m = round(m) ;
+
+if(m == [    60562.    
+    156019.   
+    401911.   
+    1035344.  
+    2667081. ]) 
+           test_pass=[test_pass,1]
+else
+	test_pass=[test_pass,0]
+	disp("arma_rnd Test failed")
+end
+
+/////////////////////////////////////////////
 
 /////////////////////////////////////////////
 

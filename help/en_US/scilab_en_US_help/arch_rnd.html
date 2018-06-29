@@ -48,24 +48,17 @@
       <dd><p class="para">Length of ARCH sequence</p></dd></dt></dl></div>
 
 <div class="refsection"><h3 class="title">Description</h3>
-   <p class="para">This is an Octave function.
-It Simulates an ARCH sequence of length t with AR coefficients b and CH coefficients a.
+   <p class="para">It Simulates an ARCH sequence of length t with AR coefficients b and CH coefficients a.
 The result y(t) follows the model</p>
-   <p class="para">y(t) = b(1) + b(2) * y(t-1) + … + b(lb) * y(t-lb+1) + e(t),
-where e(t), given y up to time t-1, is N(0, h(t)), with</p>
-   <p class="para">h(t) = a(1) + a(2) * e(t-1)^2 + … + a(la) * e(t-la+1)^2</p></div>
+   <p class="para"><span><img src='./_LaTeX_arch_rnd.xml_1.png' style='position:relative;top:9px;width:446px;height:26px'/></span>
+<p class="para">where e(t), given y up to time t-1, is N(0, h(t)), with</p></p>
+   <p class="para"><span><img src='./_LaTeX_arch_rnd.xml_2.png' style='position:relative;top:10px;width:422px;height:28px'/></span></p></div>
 
 <div class="refsection"><h3 class="title">Examples</h3>
    <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">a</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span> <span class="scilabnumber">2</span> <span class="scilabnumber">3</span> <span class="scilabnumber">4</span> <span class="scilabnumber">5</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">b</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">7</span> <span class="scilabnumber">8</span> <span class="scilabnumber">9</span> <span class="scilabnumber">10</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
-<span class="scilabid">arch_rnd</span> <span class="scilabopenclose">(</span><span class="scilabid">a</span><span class="scilabdefault">,</span> <span class="scilabid">b</span><span class="scilabdefault">,</span> <span class="scilabid">t</span><span class="scilabopenclose">)</span>
-<span class="scilabid">ans</span> <span class="scilaboperator">=</span>
-
-<span class="scilabnumber">6.1037e+00</span>
-<span class="scilabnumber">5.7294e+01</span>
-<span class="scilabnumber">5.7390e+02</span>
-<span class="scilabnumber">6.3063e+03</span>
-<span class="scilabnumber">6.8695e+04</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+<span class="scilabid">t</span> <span class="scilaboperator">=</span> <span class="scilabnumber">5</span> <span class="scilabdefault">;</span>
+<span class="scilabid">arch_rnd</span> <span class="scilabopenclose">(</span><span class="scilabid">a</span><span class="scilabdefault">,</span> <span class="scilabid">b</span><span class="scilabdefault">,</span> <span class="scilabid">t</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
     <br />
 
     <div class="manualnavbar">
