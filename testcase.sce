@@ -406,6 +406,68 @@ else
 	disp("arma_rnd Test failed")
 end
 
+/////////Test case for       buttap                 //////////
+
+n = 5 ;
+[z p g] = buttap(n);
+g = round(g*10000)/10000;
+
+if(g == 1) 
+           test_pass=[test_pass,1]
+else
+	test_pass=[test_pass,0]
+	disp("buttap Test failed")
+end
+
+
+/////////Test case for       cheb1ap                 //////////
+
+[z p g] = cheb1ap(10, 3);
+g = round(g*10000)/10000;
+
+if(g == 0.002) 
+           test_pass=[test_pass,1]
+else
+	test_pass=[test_pass,0]
+	disp("cheb1ap Test failed")
+end
+
+/////////Test case for       cheb2ap                 //////////
+
+[z p g] = cheb2ap(4, 10);
+g = round(g*10000)/10000;
+
+if(g == 0.3162) 
+           test_pass=[test_pass,1]
+else
+	test_pass=[test_pass,0]
+	disp("cheb2ap Test failed")
+end
+
+/////////Test case for       ellipap                 //////////
+
+[z p g] = ellipap(4, 3, 10);
+g = round(g*10000)/10000;
+
+if(g == 0.3162) 
+           test_pass=[test_pass,1]
+else
+	test_pass=[test_pass,0]
+	disp("ellipap Test failed")
+end
+
+/////////Test case for       ncauer                 //////////
+
+[z p g] = ncauer(3, 10, 4);
+g = round(g*10000)/10000;
+
+if(g == 0.3162) 
+           test_pass=[test_pass,1]
+else
+	test_pass=[test_pass,0]
+	disp("ellipap Test failed")
+end
+
 /////////////////////////////////////////////
 
 /////////////////////////////////////////////

@@ -1,3 +1,14 @@
+// Copyright (C) 2018 - IIT Bombay - FOSSEE
+//
+// This file must be used under the terms of the CeCILL.
+// This source file is licensed as described in the file COPYING, which
+// you should have received as part of this distribution.  The terms
+// are also available at
+// http://www.cecill.info/licences/Licence_CeCILL_V2-en.txt
+// Author:Sonu Sharma, RGIT Mumbai
+// Organization: FOSSEE, IIT Bombay
+// Email: toolbox@scilab.in
+
 function [z, p, g] = cheb1ap (n, Rp)
     //This function designs a lowpass analog Chebyshev type I filter.
 
@@ -13,11 +24,6 @@ function [z, p, g] = cheb1ap (n, Rp)
 
     //Description
     //It gives a lowpass analog Chebyshev type I filter of nth order and with a Peak-to-peak passband ripple of Rp.
-
-    //Author :
-    //Sonu Sharma
-    //RGIT, Mumbai
-    //Developed under FOSSEE Fellowship 2018, IIT Bombay
 
     //Examples
     //[z, p, g] = cheb1ap (10, 3)

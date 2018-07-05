@@ -1,8 +1,18 @@
+// Copyright (C) 2018 - IIT Bombay - FOSSEE
+//
+// This file must be used under the terms of the CeCILL.
+// This source file is licensed as described in the file COPYING, which
+// you should have received as part of this distribution.  The terms
+// are also available at
+// http://www.cecill.info/licences/Licence_CeCILL_V2-en.txt
+// Author:Sonu Sharma, RGIT Mumbai
+// Organization: FOSSEE, IIT Bombay
+// Email: toolbox@scilab.in
+
 function [z, p, g] = buttap (n)
-    //Produces analog prototype filter
+    //Produces analog prototype Butterworth filter
 
     //Calling Sequence
-
     //[z, p, g] = buttap (n)
 
     //Parameters 
@@ -13,11 +23,6 @@ function [z, p, g] = buttap (n)
 
     //Description
     //It gives a lowpass analog prototype Butterworth filter of nth order.
-
-    //Author :
-    //Sonu Sharma
-    //RGIT, Mumbai
-    //Developed under FOSSEE Fellowship 2018, IIT Bombay
 
     //Examples
     //[z, p, g] = buttap(5)

@@ -1,3 +1,14 @@
+// Copyright (C) 2018 - IIT Bombay - FOSSEE
+//
+// This file must be used under the terms of the CeCILL.
+// This source file is licensed as described in the file COPYING, which
+// you should have received as part of this distribution.  The terms
+// are also available at
+// http://www.cecill.info/licences/Licence_CeCILL_V2-en.txt
+// Author:Sonu Sharma, RGIT Mumbai
+// Organization: FOSSEE, IIT Bombay
+// Email: toolbox@scilab.in
+
 function [z, p, g] = ellipap (n, Rp, Rs)
     //Produces a lowpass analog prototype elliptic filter.
 
@@ -11,11 +22,6 @@ function [z, p, g] = ellipap (n, Rp, Rs)
 
     //Description
     //It gives a lowpass analog elliptic prototype filter of nth order, with a Peak-to-peak passband ripple of Rp dB and a stopband attenuation of Rs dB.
-
-    //Author :
-    //Sonu Sharma
-    //RGIT, Mumbai
-    //Developed under FOSSEE Fellowship 2018, IIT Bombay
 
     //Examples
     //[z, p, g] = ellipap (4, 3,10)

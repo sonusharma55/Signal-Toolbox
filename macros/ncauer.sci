@@ -1,3 +1,14 @@
+// Copyright (C) 2018 - IIT Bombay - FOSSEE
+//
+// This file must be used under the terms of the CeCILL.
+// This source file is licensed as described in the file COPYING, which
+// you should have received as part of this distribution.  The terms
+// are also available at
+// http://www.cecill.info/licences/Licence_CeCILL_V2-en.txt
+// Author:Sonu Sharma, RGIT Mumbai
+// Organization: FOSSEE, IIT Bombay
+// Email: toolbox@scilab.in
+
 function [Zz, Zp, Zg] = ncauer(Rp, Rs, n)
 //Analog prototype for Cauer filter (Cauer filter and elliptic filters are same).
 
