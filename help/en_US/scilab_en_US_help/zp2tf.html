@@ -46,28 +46,23 @@
    <dt><span class="term">p:</span>
       <dd><p class="para">Poles</p></dd></dt>
    <dt><span class="term">k:</span>
-      <dd><p class="para">Leading coefficient</p></dd></dt>
+      <dd><p class="para">Leading coefficient (Gain)</p></dd></dt>
    <dt><span class="term">Num:</span>
-      <dd><p class="para">Numerator of the transfer function</p></dd></dt>
+      <dd><p class="para">Numerator coefficients of the transfer function</p></dd></dt>
    <dt><span class="term">den:</span>
-      <dd><p class="para">Denomenator of the transfer function</p></dd></dt></dl></div>
+      <dd><p class="para">Denomenator coefficients of the transfer function</p></dd></dt></dl></div>
 
 <div class="refsection"><h3 class="title">Description</h3>
-   <p class="para">This is an Octave function.
-It converts zeros / poles to a transfer function.</p></div>
+   <p class="para">It converts zeros / poles representation to  transfer function representation.</p></div>
 
 <div class="refsection"><h3 class="title">Examples</h3>
    <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">z</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span> <span class="scilabnumber">2</span> <span class="scilabnumber">3</span><span class="scilabopenclose">]</span>
 <span class="scilabid">p</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">4</span> <span class="scilabnumber">5</span> <span class="scilabnumber">6</span><span class="scilabopenclose">]</span>
 <span class="scilabid">k</span> <span class="scilaboperator">=</span> <span class="scilabnumber">5</span>
-<span class="scilabopenclose">[</span><span class="scilabid">num</span><span class="scilabdefault">,</span> <span class="scilabid">den</span><span class="scilabopenclose">]</span> <span class="scilaboperator">=</span> <span class="scilabid">zp2tf</span> <span class="scilabopenclose">(</span><span class="scilabid">z</span><span class="scilabdefault">,</span> <span class="scilabid">p</span><span class="scilabdefault">,</span> <span class="scilabid">k</span><span class="scilabopenclose">)</span>
-<span class="scilabid">num</span> <span class="scilaboperator">=</span>
+<span class="scilabopenclose">[</span><span class="scilabid">num</span><span class="scilabdefault">,</span> <span class="scilabid">den</span><span class="scilabopenclose">]</span> <span class="scilaboperator">=</span> <span class="scilabid">zp2tf</span> <span class="scilabopenclose">(</span><span class="scilabid">z</span><span class="scilabdefault">,</span> <span class="scilabid">p</span><span class="scilabdefault">,</span> <span class="scilabid">k</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
 
-<span class="scilabnumber">5</span>  <span class="scilaboperator">-</span><span class="scilabnumber">30</span>   <span class="scilabnumber">55</span>  <span class="scilaboperator">-</span><span class="scilabnumber">30</span>
-
-<span class="scilabid">den</span> <span class="scilaboperator">=</span>
-
-<span class="scilabnumber">1</span>   <span class="scilaboperator">-</span><span class="scilabnumber">15</span>    <span class="scilabnumber">74</span>  <span class="scilaboperator">-</span><span class="scilabnumber">120</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+  <div class="refsection"><h3 class="title">Authors</h3>
+    <ul class="itemizedlist"><li class="member">Sonu Sharma, RGIT Mumbai (fellow at FOSSEE, IIT Bombay)</li></ul></div>
     <br />
 
     <div class="manualnavbar">

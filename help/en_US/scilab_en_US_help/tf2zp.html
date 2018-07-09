@@ -33,7 +33,34 @@
 
     <br /><br />
     <div class="refnamediv"><h1 class="refname">tf2zp</h1>
-    <p class="refpurpose">[z,p,k]= tf2zp(b,a);</p></div>
+    <p class="refpurpose">Transfer function to zero pole conversion</p></div>
+
+<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
+   <div class="synopsis"><pre><span class="default">[</span><span class="default">z</span> <span class="default">p</span> <span class="default">k</span><span class="default">] = </span><span class="functionid">tf2zp</span><span class="default">(</span><span class="default">num</span><span class="default">, </span><span class="default">den</span><span class="default">)</span></pre></div></div>
+
+<div class="refsection"><h3 class="title">Parameters</h3>
+   <dl><dt><span class="term">z:</span>
+      <dd><p class="para">Zeros</p></dd></dt>
+   <dt><span class="term">p:</span>
+      <dd><p class="para">Poles</p></dd></dt>
+   <dt><span class="term">k:</span>
+      <dd><p class="para">Leading coefficient (Gain)</p></dd></dt>
+   <dt><span class="term">Num:</span>
+      <dd><p class="para">Numerator coefficients of the transfer function</p></dd></dt>
+   <dt><span class="term">den:</span>
+      <dd><p class="para">Denomenator coefficients of the transfer function</p></dd></dt></dl></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para">It converts transfer function representation to zeros / poles representation.</p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">b</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span> <span class="scilabnumber">2</span> <span class="scilabnumber">3</span><span class="scilabopenclose">]</span>
+<span class="scilabid">a</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">4</span> <span class="scilabnumber">5</span> <span class="scilabnumber">6</span><span class="scilabopenclose">]</span>
+<span class="scilabopenclose">[</span><span class="scilabid">z</span><span class="scilabdefault">,</span> <span class="scilabid">p</span><span class="scilabdefault">,</span> <span class="scilabid">k</span><span class="scilabopenclose">]</span> <span class="scilaboperator">=</span> <span class="scilabid">zp2tf</span><span class="scilabopenclose">(</span><span class="scilabid">b</span><span class="scilabdefault">,</span> <span class="scilabid">a</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+  <div class="refsection"><h3 class="title">Authors</h3>
+    <ul class="itemizedlist"><li class="member">Debdeep Dey (FOSSEE, IIT Bombay)</li>
+      <li class="member">MODIFIED BY: Sonu Sharma (fellow at FOSSEE, IIT Bombay)</li></ul></div>
     <br />
 
     <div class="manualnavbar">

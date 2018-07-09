@@ -184,6 +184,7 @@ polyscale
 polystab
 polyval
 pow2db
+prepad
 primitive
 prony
 pulseperiod
