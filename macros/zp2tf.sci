@@ -51,6 +51,6 @@ function [num, den] = zp2tf (z, p, k)
     num = coeff(n);
     num = flipdim(num,2);
     den = coeff(d);
-    den = flipdim(den,2)
+    den = flipdim(den,2);
 
 endfunction
