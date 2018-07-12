@@ -18,25 +18,33 @@
   <refnamediv>
     <refname>medfilt1</refname>
     <refpurpose>1D median filtering</refpurpose>
+<<<<<<< HEAD
     <para> </para>
+=======
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
   </refnamediv>
 
 
 <refsynopsisdiv>
    <title>Calling Sequence</title>
    <synopsis>
+<<<<<<< HEAD
  y = medfilt1(x)
  y = medfilt1(x, n)
  y = medfilt1(x, n, dim)
  y = medfitl1(__, nanflag, padding)
    </synopsis>
    <para> </para>
+=======
+   </synopsis>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 </refsynopsisdiv>
 
 <refsection>
    <title>Description</title>
    <para>
 y = medfilt1(x)
+<<<<<<< HEAD
    </para>
 <para>Applies a 3rd order 1-dimensional median filter to input x along the
 first non-zero dimension.</para>
@@ -56,12 +64,30 @@ number (even number) of data points.</para>
 type of filtering to be performed at the signal edges.</para>
 
    <para> </para>
+=======
+Applies a 3rd order 1-dimensional median filter to input x along the
+first non-zero dimension. The function appropriately pads the signal
+with zeros at the endings. For a segment, a median is calculated as
+the middle value (average of two middle values) for odd number
+number (even number) of data points.
+y = medfilt1(x,n)
+Applies a nth order 1-dimensional median filter.
+y = medfilt1(x,n,dim)
+Applies the median filter along the n-th dimension
+y = medfilt1(__, nanflag, padding)
+nanflag specifies how NaN values are treated. padding specifies the
+type of filtering to be performed at the signal edges.
+   </para>
+   <para>
+</para>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 </refsection>
 
 <refsection>
    <title>Parameters</title>
    <variablelist>
    <varlistentry><term>x:</term>
+<<<<<<< HEAD
       <listitem><para> int | double</para> <para>Input signal.</para></listitem></varlistentry>
    <varlistentry><term>n:</term>
       <listitem><para> positive integer, scalar</para><para>
@@ -86,11 +112,28 @@ type of filtering to be performed at the signal edges.</para>
       <para>y has the same size as x</para></listitem></varlistentry>
    </variablelist>
    <para> </para>
+=======
+      <listitem><para> int | double</para></listitem></varlistentry>
+   <varlistentry><term>n:</term>
+      <listitem><para> positive integer scalar</para></listitem></varlistentry>
+   <varlistentry><term>dim:</term>
+      <listitem><para> positive integer scalar</para></listitem></varlistentry>
+   <varlistentry><term>nanflag:</term>
+      <listitem><para> 'includenan' (default) | 'omitnan'</para></listitem></varlistentry>
+   <varlistentry><term>* includenan:</term>
+      <listitem><para> Filtering such that the median of any segment</para></listitem></varlistentry>
+   <varlistentry><term>* omitnan:</term>
+      <listitem><para> Filtering with NaNs omitted in each segment. If a segment</para></listitem></varlistentry>
+   <varlistentry><term>y:</term>
+      <listitem><para> int | double</para></listitem></varlistentry>
+   </variablelist>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 </refsection>
 
 <refsection>
    <title>Examples</title>
    <programlisting role="example"><![CDATA[
+<<<<<<< HEAD
 //Generate a sinusoidal signal sampled for 1 second at 100 Hz. Add a higher-frequency sinusoid to simulate noise. 
 fs = 100;
 t = 0:1/fs:1;
@@ -119,6 +162,17 @@ y = y'
 </scilab:image>
 
 
+=======
+1) Noise supression using median filtering
+fs = 1e3;
+t =  1:1/fs:1;
+s = sin(2*%pi*2*t)+ cos(2*%pi*5*t);
+// Adding noise
+x = s + 0.1*randn(size(s));
+y = medfilt1(x);
+
+   ]]></programlisting>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 </refsection>
 
 <refsection>

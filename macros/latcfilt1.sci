@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 //Author: Parthasarathi Panda
 //parthasarathipanda314@gmail.com
 //the function is for application on vectors only

@@ -39,7 +39,10 @@ cheby1
 cheby2
 check
 chirp
+<<<<<<< HEAD
 circshift
+=======
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 cl2bp
 clustersegment
 cmorwavf
@@ -58,7 +61,10 @@ decimate
 detrend1
 dftmtx
 diffpara
+<<<<<<< HEAD
 digitrevorder
+=======
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 diric
 downsample
 dst1
@@ -184,7 +190,10 @@ polyscale
 polystab
 polyval
 pow2db
+<<<<<<< HEAD
 prepad
+=======
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 primitive
 prony
 pulseperiod
@@ -266,7 +275,11 @@ var
 vco
 wconv
 welchwin
+<<<<<<< HEAD
 wind
+=======
+window
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 wkeep
 wrev
 xcorr1

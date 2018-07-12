@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //Function y=upfirdn(xin,h,p,q)
 //
 //this function upsamples the input data xin by factor "p", filters it using fiter coefficients "h" and the downsamples this filtered data by a factor "q".
@@ -42,5 +43,31 @@ if(nargin < 2)
 	yout = upsample(xin,p);
 	yout = filter(h,1,yout);
 	yout = downsample(yout,q);
+=======
+function y = upfirdn (x, h, p, q)
+//This function upsamples the input data, applies the FIR filter and then downsamples it.
+//Calling Sequence
+//y = upfirdn (x, h, p, q)
+//Parameters 
+//x:
+//h:
+//p:
+//q:
+//Description
+//This is an Octave function.
+//This function upsamples the input data in the matrix by a factor of n. Then the upsampled data is FIR filtered. After this, the resultant is downsampled.
+//Examples
+//upfirdn([1,2,3],2,3,5)
+//ans  =
+//
+//    2.    0. 
+funcprot(0);
+rhs = argn(2)
+if(rhs~=4)
+error("Wrong number of input arguments.")
+end
+
+y = callOctave("upfirdn",x, h, p, q)
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 
 endfunction

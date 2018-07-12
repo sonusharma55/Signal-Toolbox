@@ -54,11 +54,19 @@ The resulting matrix may be used as a regressor matrix in autoregressions.
 <refsection>
    <title>Examples</title>
    <programlisting role="example"><![CDATA[
+<<<<<<< HEAD
 
 Y = [1,2,3] ;
 K = 2 ;
 autoreg_matrix(Y,K)
 
+=======
+autoreg_matrix([1,2,3],2)
+ans =
+1.    0.    0.
+1.    1.    0.
+1.    2.    1.
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
    ]]></programlisting>
 </refsection>
 </refentry>

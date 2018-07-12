@@ -17,7 +17,11 @@
 
   <refnamediv>
     <refname>cheb1ap</refname>
+<<<<<<< HEAD
     <refpurpose>Produces a lowpass analog Chebyshev type I prototype filter.</refpurpose>
+=======
+    <refpurpose>This function designs a lowpass analog Chebyshev type I filter.</refpurpose>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
   </refnamediv>
 
 
@@ -25,6 +29,11 @@
    <title>Calling Sequence</title>
    <synopsis>
    [z, p, g] = cheb1ap (n, Rp)
+<<<<<<< HEAD
+=======
+   [z, p] = cheb1ap (n, Rp)
+   p = cheb1ap (n, Rp)
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
    </synopsis>
 </refsynopsisdiv>
 
@@ -34,7 +43,11 @@
    <varlistentry><term>n:</term>
       <listitem><para> Filter Order</para></listitem></varlistentry>
    <varlistentry><term>Rp:</term>
+<<<<<<< HEAD
       <listitem><para> Peak-to-peak passband ripple in dB</para></listitem></varlistentry>
+=======
+      <listitem><para> Peak-to-peak passband ripple</para></listitem></varlistentry>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
    <varlistentry><term>z:</term>
       <listitem><para> Zeros</para></listitem></varlistentry>
    <varlistentry><term>p:</term>
@@ -47,13 +60,19 @@
 <refsection>
    <title>Description</title>
    <para>
+<<<<<<< HEAD
 It gives a lowpass analog Chebyshev type I prototype filter of nth order and with a Peak-to-peak passband ripple of Rp.
+=======
+This is an Octave function.
+It designs a lowpass analog Chebyshev type I filter of nth order and with a Peak-to-peak passband ripple of Rp.
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 </para>
 </refsection>
 
 <refsection>
    <title>Examples</title>
    <programlisting role="example"><![CDATA[
+<<<<<<< HEAD
 n = 10 ;
 Rp = 3 ;
 [z, p, g] = cheb1ap (n, Rp)
@@ -68,4 +87,21 @@ Rp = 3 ;
     </simplelist>
   </refsection>
 
+=======
+[z, p, g] = cheb1ap (10, 20)
+z = [](0x0)
+p =
+
+Columns 1 through 6:
+
+-0.00157 - 0.98774i  -0.00456 - 0.89105i  -0.00709 - 0.70714i  -0.00894 - 0.45401i  -0.00991 - 0.15644i  -0.00991 + 0.15644i
+
+Columns 7 through 10:
+
+-0.00894 + 0.45401i  -0.00709 + 0.70714i  -0.00456 + 0.89105i  -0.00157 + 0.98774i
+
+g =  1.9630e-04 - 6.3527e-22i
+   ]]></programlisting>
+</refsection>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 </refentry>

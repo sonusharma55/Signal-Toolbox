@@ -17,7 +17,11 @@
 
   <refnamediv>
     <refname>besselap</refname>
+<<<<<<< HEAD
     <refpurpose>Bessel analog filter prototype.</refpurpose>
+=======
+    <refpurpose>Return bessel analog filter prototype.</refpurpose>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
   </refnamediv>
 
 
@@ -25,6 +29,10 @@
    <title>Calling Sequence</title>
    <synopsis>
    [zero, pole, gain] = besselap (n)
+<<<<<<< HEAD
+=======
+   [zero, pole] = besselap (n)
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
    zero = besselap (n)
    </synopsis>
 </refsynopsisdiv>
@@ -35,24 +43,38 @@
    <varlistentry><term>n:</term>
       <listitem><para> Filter Order</para></listitem></varlistentry>
    <varlistentry><term>zero:</term>
+<<<<<<< HEAD
       <listitem><para> Zeros of filter</para></listitem></varlistentry>
    <varlistentry><term>pole:</term>
       <listitem><para> Poles of filter</para></listitem></varlistentry>
    <varlistentry><term>gain:</term>
       <listitem><para> Gain of filter</para></listitem></varlistentry>
+=======
+      <listitem><para> Zeros</para></listitem></varlistentry>
+   <varlistentry><term>pole:</term>
+      <listitem><para> Poles</para></listitem></varlistentry>
+   <varlistentry><term>gain:</term>
+      <listitem><para> Gain</para></listitem></varlistentry>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
    </variablelist>
 </refsection>
 
 <refsection>
    <title>Description</title>
    <para>
+<<<<<<< HEAD
 It Return Bessel analog filter prototype of nth order.
+=======
+This is an Octave function.
+It Return bessel analog filter prototype of nth order.
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 </para>
 </refsection>
 
 <refsection>
    <title>Examples</title>
    <programlisting role="example"><![CDATA[
+<<<<<<< HEAD
 n = 5;
 [zero, pole, gain] = besselap (n)
    ]]></programlisting>
@@ -72,4 +94,19 @@ n = 5;
 
 </refsection>
 
+=======
+[zero, pole, gain] = besselap (5)
+zero = [](0x0)
+pole =
+
+-0.59058 + 0.90721i
+-0.59058 - 0.90721i
+-0.92644 + 0.00000i
+-0.85155 + 0.44272i
+-0.85155 - 0.44272i
+
+gain =  1
+   ]]></programlisting>
+</refsection>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 </refentry>

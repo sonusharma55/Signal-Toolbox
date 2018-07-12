@@ -16,7 +16,11 @@
 
       </td>
       <td width="40%" class="center">
+<<<<<<< HEAD
       	<span class="top"><a href="section_3f66500b7bc388d82439997e800d15a1.html">FOSSEE Signal Processing Toolbox</a></span>
+=======
+      	<span class="top"><a href="section_e54aa8aac34aa55341e8b4b782fe1a74.html">FOSSEE Signal Processing Toolbox</a></span>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 
       </td>
       <td width="30%" class="next">
@@ -29,7 +33,11 @@
 
 
 
+<<<<<<< HEAD
     <span class="path"><a href="index.html">FOSSEE Signal Processing Toolbox</a> &gt;&gt; <a href="section_3f66500b7bc388d82439997e800d15a1.html">FOSSEE Signal Processing Toolbox</a> &gt; ncauer</span>
+=======
+    <span class="path"><a href="index.html">FOSSEE Signal Processing Toolbox</a> &gt;&gt; <a href="section_e54aa8aac34aa55341e8b4b782fe1a74.html">FOSSEE Signal Processing Toolbox</a> &gt; ncauer</span>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 
     <br /><br />
     <div class="refnamediv"><h1 class="refname">ncauer</h1>
@@ -37,12 +45,19 @@
 
 
 <div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
+<<<<<<< HEAD
    <div class="synopsis"><pre><span class="default">[</span><span class="default">Zz</span><span class="default">, </span><span class="default">Zp</span><span class="default">, </span><span class="default">Zg</span><span class="default">] = </span><span class="functionid">ncauer</span><span class="default">(</span><span class="default">Rp</span><span class="default">, </span><span class="default">Rs</span><span class="default">, </span><span class="default">n</span><span class="default">)</span></pre></div></div>
+=======
+   <div class="synopsis"><pre><span class="default">[</span><span class="default">Zz</span><span class="default">, </span><span class="default">Zp</span><span class="default">, </span><span class="default">Zg</span><span class="default">] = </span><span class="functionid">ncauer</span><span class="default">(</span><span class="default">Rp</span><span class="default">, </span><span class="default">Rs</span><span class="default">, </span><span class="default">n</span><span class="default">)</span>
+<span class="default">[</span><span class="default">Zz</span><span class="default">, </span><span class="default">Zp</span><span class="default">] = </span><span class="functionid">ncauer</span><span class="default">(</span><span class="default">Rp</span><span class="default">, </span><span class="default">Rs</span><span class="default">, </span><span class="default">n</span><span class="default">)</span>
+<span class="default">Zz</span><span class="default"> = </span><span class="functionid">ncauer</span><span class="default">(</span><span class="default">Rp</span><span class="default">, </span><span class="default">Rs</span><span class="default">, </span><span class="default">n</span><span class="default">)</span></pre></div></div>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 
 <div class="refsection"><h3 class="title">Parameters</h3>
    <dl><dt><span class="term">n:</span>
       <dd><p class="para">Filter Order</p></dd></dt>
    <dt><span class="term">Rp:</span>
+<<<<<<< HEAD
       <dd><p class="para">Peak-to-peak passband ripple in dB</p></dd></dt>
    <dt><span class="term">Rs:</span>
       <dd><p class="para">Stopband attenuation in dB</p></dd></dt>
@@ -67,6 +82,30 @@
   <div class="refsection"><h3 class="title">Authors</h3>
     <ul class="itemizedlist"><li class="member">Sonu Sharma, RGIT Mumbai</li>
       <li class="member">FOSSEE, IIT Bombay</li></ul></div>
+=======
+      <dd><p class="para">Peak-to-peak passband ripple</p></dd></dt>
+   <dt><span class="term">Rs:</span>
+      <dd><p class="para">Stopband attenuation</p></dd></dt></dl></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para">This is an Octave function.
+It designs an analog prototype for Cauer filter of nth order, with a Peak-to-peak passband ripple of Rp and a stopband attenuation of Rs.</p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">n</span> <span class="scilaboperator">=</span> <span class="scilabnumber">5</span><span class="scilabdefault">;</span>
+<span class="scilabid">Rp</span> <span class="scilaboperator">=</span> <span class="scilabnumber">5</span><span class="scilabdefault">;</span>
+<span class="scilabid">Rs</span> <span class="scilaboperator">=</span> <span class="scilabnumber">5</span><span class="scilabdefault">;</span>
+<span class="scilabopenclose">[</span><span class="scilabid">Zz</span><span class="scilabdefault">,</span> <span class="scilabid">Zp</span><span class="scilabdefault">,</span> <span class="scilabid">Zg</span><span class="scilabopenclose">]</span> <span class="scilaboperator">=</span> <span class="scilabid">ncauer</span><span class="scilabopenclose">(</span><span class="scilabid">Rp</span><span class="scilabdefault">,</span> <span class="scilabid">Rs</span><span class="scilabdefault">,</span> <span class="scilabid">n</span><span class="scilabopenclose">)</span>
+<span class="scilabid">Zz</span> <span class="scilaboperator">=</span>
+
+<span class="scilabnumber">0.0000</span> <span class="scilaboperator">+</span> <span class="scilabnumber">2.5546</span><span class="scilabid">i</span>   <span class="scilabnumber">0.0000</span> <span class="scilaboperator">+</span> <span class="scilabnumber">1.6835</span><span class="scilabid">i</span>  <span class="scilaboperator">-</span><span class="scilabnumber">0.0000</span> <span class="scilaboperator">-</span> <span class="scilabnumber">2.5546</span><span class="scilabid">i</span>  <span class="scilaboperator">-</span><span class="scilabnumber">0.0000</span> <span class="scilaboperator">-</span> <span class="scilabnumber">1.6835</span><span class="scilabid">i</span>
+
+<span class="scilabid">Zp</span> <span class="scilaboperator">=</span>
+
+<span class="scilaboperator">-</span><span class="scilabnumber">0.10199</span> <span class="scilaboperator">+</span> <span class="scilabnumber">0.64039</span><span class="scilabid">i</span>  <span class="scilaboperator">-</span><span class="scilabnumber">0.03168</span> <span class="scilaboperator">+</span> <span class="scilabnumber">0.96777</span><span class="scilabid">i</span>  <span class="scilaboperator">-</span><span class="scilabnumber">0.10199</span> <span class="scilaboperator">-</span> <span class="scilabnumber">0.64039</span><span class="scilabid">i</span>  <span class="scilaboperator">-</span><span class="scilabnumber">0.03168</span> <span class="scilaboperator">-</span> <span class="scilabnumber">0.96777</span><span class="scilabid">i</span>  <span class="scilaboperator">-</span><span class="scilabnumber">0.14368</span> <span class="scilaboperator">+</span> <span class="scilabnumber">0.00000</span><span class="scilabid">i</span>
+
+<span class="scilabid">Zg</span> <span class="scilaboperator">=</span>  <span class="scilabnumber">0.0030628</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
     <br />
 
     <div class="manualnavbar">
@@ -78,7 +117,11 @@
 
       </td>
       <td width="40%" class="center">
+<<<<<<< HEAD
       	<span class="top"><a href="section_3f66500b7bc388d82439997e800d15a1.html">FOSSEE Signal Processing Toolbox</a></span>
+=======
+      	<span class="top"><a href="section_e54aa8aac34aa55341e8b4b782fe1a74.html">FOSSEE Signal Processing Toolbox</a></span>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 
       </td>
       <td width="30%" class="next">

@@ -16,7 +16,11 @@
 
       </td>
       <td width="40%" class="center">
+<<<<<<< HEAD
       	<span class="top"><a href="section_3f66500b7bc388d82439997e800d15a1.html">FOSSEE Signal Processing Toolbox</a></span>
+=======
+      	<span class="top"><a href="section_e54aa8aac34aa55341e8b4b782fe1a74.html">FOSSEE Signal Processing Toolbox</a></span>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 
       </td>
       <td width="30%" class="next">
@@ -29,28 +33,46 @@
 
 
 
+<<<<<<< HEAD
     <span class="path"><a href="index.html">FOSSEE Signal Processing Toolbox</a> &gt;&gt; <a href="section_3f66500b7bc388d82439997e800d15a1.html">FOSSEE Signal Processing Toolbox</a> &gt; lpc</span>
 
     <br /><br />
     <div class="refnamediv"><h1 class="refname">lpc</h1>
     <p class="refpurpose">Linear prediction filter coefficients</p>
     <p class="para"></p></div>
+=======
+    <span class="path"><a href="index.html">FOSSEE Signal Processing Toolbox</a> &gt;&gt; <a href="section_e54aa8aac34aa55341e8b4b782fe1a74.html">FOSSEE Signal Processing Toolbox</a> &gt; lpc</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">lpc</h1>
+    <p class="refpurpose">Linear prediction filter coefficients</p></div>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 
 
 <div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
    <div class="synopsis"><pre><span class="default">[</span><span class="default">a</span><span class="default">,</span><span class="default">g</span><span class="default">] = </span><span class="functionid">lpc</span><span class="default">(</span><span class="default">x</span><span class="default">)</span>
+<<<<<<< HEAD
 <span class="default">[</span><span class="default">a</span><span class="default">,</span><span class="default">g</span><span class="default">] = </span><span class="functionid">lpc</span><span class="default">(</span><span class="default">x</span><span class="default">,</span><span class="default">p</span><span class="default">)</span></pre></div>
     <p class="para"></p></div>
+=======
+<span class="default">[</span><span class="default">a</span><span class="default">,</span><span class="default">g</span><span class="default">] = </span><span class="functionid">lpc</span><span class="default">(</span><span class="default">x</span><span class="default">,</span><span class="default">p</span><span class="default">)</span></pre></div></div>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 
 <div class="refsection"><h3 class="title">Description</h3>
    <p class="para">[a,g] = lpc(x,p)
 Determines the coefficients of a pth order forward linear predictor
+<<<<<<< HEAD
 filter by minimizing the squared error. <p class="para">If p is unspecified, a
 default value of length(x)-1 is used.</p></p>
+=======
+filter by minimizing the squared error. If p is unspecified, a
+default value of length(x)-1 is used.</p>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
    <p class="para"></p></div>
 
 <div class="refsection"><h3 class="title">Parameters</h3>
    <dl><dt><span class="term">x:</span>
+<<<<<<< HEAD
       <dd><p class="para">double</p><p class="para">input signal, if it is a matrix each column is computed independently</p></dd></dt>
    <dt><span class="term">p:</span>
       <dd><p class="para">int, natural number, scalar</p><p class="para">order of linear predictor filter, value must be scalar, positive and must be less than or equal to length of input signal</p></dd></dt>
@@ -82,6 +104,26 @@ default value of length(x)-1 is used.</p></p>
  <img src='./lpc_1.png'/>
    <p class="para"></p></div>
 
+=======
+      <dd><p class="para">double</p></dd></dt>
+   <dt><span class="term">p:</span>
+      <dd><p class="para">int, natural number, scalar</p></dd></dt>
+   <dt><span class="term">a:</span>
+      <dd><p class="para">double</p></dd></dt>
+   <dt><span class="term">g:</span>
+      <dd><p class="para">double</p></dd></dt></dl></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabnumber">1</span><span class="scilabopenclose">)</span>
+<span class="scilabid">noise</span> <span class="scilaboperator">=</span> <span class="scilabid">randn</span><span class="scilabopenclose">(</span><span class="scilabnumber">20000</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">x</span> <span class="scilaboperator">=</span> <a class="scilabmacro" href="scilab://filter">filter</a><span class="scilabopenclose">(</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span> <span class="scilabnumber">1</span><span class="scilaboperator">/</span><span class="scilabnumber">5</span> <span class="scilabnumber">1</span><span class="scilaboperator">/</span><span class="scilabnumber">3</span> <span class="scilabnumber">1</span><span class="scilaboperator">/</span><span class="scilabnumber">4</span><span class="scilabopenclose">]</span><span class="scilabdefault">,</span><span class="scilabid">noise</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">x</span> <span class="scilaboperator">=</span> <span class="scilabid">x</span><span class="scilabopenclose">(</span><span class="scilabnumber">15904</span><span class="scilabspecial">:</span><span class="scilabnumber">20000</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabopenclose">[</span><span class="scilabid">a</span><span class="scilabdefault">,</span><span class="scilabid">g</span><span class="scilabopenclose">]</span> <span class="scilaboperator">=</span> <span class="scilabid">lpc</span><span class="scilabopenclose">(</span><span class="scilabid">x</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+
+<span class="scilabid">References</span>
+<span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabopenclose">]</span> <span class="scilabid">Hayes</span><span class="scilabdefault">,</span> <span class="scilabid">Monson</span> <span class="scilabid">H</span><span class="scilaboperator">.</span> <span class="scilabid">Statistical</span> <span class="scilabid">digital</span> <span class="scilabid">signal</span> <span class="scilabid">processing</span> <a class="scilabcommand" href="scilab://and">and</a> <span class="scilabstring">modeling.</span>
+<span class="scilabid">John</span> <span class="scilabid">Wiley</span> <span class="scilaboperator">&#0038;</span> <span class="scilabid">Sons</span><span class="scilabdefault">,</span> <span class="scilabnumber">2009</span><span class="scilabdefault">,</span> <span class="scilabid">pg</span><span class="scilaboperator">.</span> <span class="scilabnumber">220</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 
 <div class="refsection"><h3 class="title">See also</h3>
    <ul class="itemizedlist"><li class="member"><a href="aryule.html" class="link">| levinson | prony | pyulear | stmcb</a></li></ul></div>
@@ -99,7 +141,11 @@ default value of length(x)-1 is used.</p></p>
 
       </td>
       <td width="40%" class="center">
+<<<<<<< HEAD
       	<span class="top"><a href="section_3f66500b7bc388d82439997e800d15a1.html">FOSSEE Signal Processing Toolbox</a></span>
+=======
+      	<span class="top"><a href="section_e54aa8aac34aa55341e8b4b782fe1a74.html">FOSSEE Signal Processing Toolbox</a></span>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 
       </td>
       <td width="30%" class="next">

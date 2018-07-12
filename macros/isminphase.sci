@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //isminphase Determine whether filter is minimum phase or not
 
 // Description : It determines whether the given system function is minimum phase system or not . Minimum phase system means all zeros of transfer function will be inside the unit circle in z-plane , also poles mustbe within unit circle for stability and causality
@@ -17,6 +18,8 @@
 //
 // 1.
 
+=======
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 //Author: Parthasarathi Panda
 //parthasarathipanda314@gmail.com
 function ismin=isminphase(varargin)
@@ -74,6 +77,7 @@ function ismin=isminphase(varargin)
     gc=gcd([poly_a,poly_b]);
     [r,den]=pdiv(poly_b,gc);
     [r,num]=pdiv(poly_a,gc);
+<<<<<<< HEAD
     maxpole=max(abs(roots(den)));
     maxzero=max(abs(roots(num)));
     if length(b)==1 then
@@ -86,6 +90,20 @@ function ismin=isminphase(varargin)
         end
     elseif maxpole>1 then
         if length(a)==1 then
+=======
+    maxpole=min(abs(roots(den)));
+    maxzero=min(abs(roots(num)));
+    if length(a)==1 then
+        if length(b)==1 then
+            ismin=1;
+        elseif maxzero>1 then
+            ismin=1;
+        else
+            ismin=0;
+        end
+    elseif maxpole>1 then
+        if length(b)==1 then
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
             ismin=1;
         elseif maxzero>1 then
             ismin=1;

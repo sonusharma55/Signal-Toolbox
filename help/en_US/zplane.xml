@@ -17,6 +17,7 @@
 
   <refnamediv>
     <refname>zplane</refname>
+<<<<<<< HEAD
     <refpurpose>Pole-Zero plot for Discrete time systems</refpurpose>
     <para> </para>
   </refnamediv>
@@ -66,4 +67,9 @@ zplane(z,p);
 
 </refsection>
 
+=======
+    <refpurpose>funcprot(0);</refpurpose>
+  </refnamediv>
+
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 </refentry>

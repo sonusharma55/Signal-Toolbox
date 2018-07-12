@@ -1,11 +1,16 @@
+<<<<<<< HEAD
 //ismaxphase Determine whether filter is maximum phase or not
 
 // Description : It determines whether the given system function is maximum phase system or not . Maximum phase system means all zeros of transfer function will be outside the unit circle in z-plane also poles mustbe within unit circle for stability and causality
 
+=======
+//ismaxphase Determine whether filter is maximum phase
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 //Syntax
 //flag = ismaxphase(b,a)
 //flag = ismaxphase(sos)
 //flag = ismaxphase(...,tol)
+<<<<<<< HEAD
 // b and a are the vectors containing numerator and denumerator coefficients respectively
 //tol, tolerance is used to determine when two numbers are close enough to be considered equal.
 
@@ -17,6 +22,10 @@
 //
 // 1.
 
+=======
+// b and a are the vectors containing zero and pole coefficients respectively
+//tol, tolerance is used to determine when two numbers are close enough to be considered equal. 
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 //Author: Parthasarathi Panda
 //parthasarathipanda314@gmail.com
 function ismax=ismaxphase(varargin)
@@ -74,18 +83,30 @@ function ismax=ismaxphase(varargin)
     gc=gcd([poly_a,poly_b]);
     [r,den]=pdiv(poly_b,gc);
     [r,num]=pdiv(poly_a,gc);
+<<<<<<< HEAD
     maxpole=max(abs(roots(den)));
     minzero=min(abs(roots(num)));
     if length(b)==1 then
         if length(a)==1 then
             ismax=1;
+=======
+    maxpole=min(abs(roots(den)));
+    minzero=max(abs(roots(num)));
+    if length(a)==1 then
+        if length(b)==1 then
+            ismax=0;
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
         elseif minzero>1 then
             ismax=0;
         else
             ismax=1;
         end
     elseif maxpole>1 then
+<<<<<<< HEAD
         if length(a)==1 then
+=======
+        if length(b)==1 then
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
             ismax=0;
         elseif minzero>1 then
             ismax=0;

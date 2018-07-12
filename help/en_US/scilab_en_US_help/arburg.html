@@ -16,7 +16,11 @@
 
       </td>
       <td width="40%" class="center">
+<<<<<<< HEAD
       	<span class="top"><a href="section_3f66500b7bc388d82439997e800d15a1.html">FOSSEE Signal Processing Toolbox</a></span>
+=======
+      	<span class="top"><a href="section_e54aa8aac34aa55341e8b4b782fe1a74.html">FOSSEE Signal Processing Toolbox</a></span>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 
       </td>
       <td width="30%" class="next">
@@ -29,7 +33,11 @@
 
 
 
+<<<<<<< HEAD
     <span class="path"><a href="index.html">FOSSEE Signal Processing Toolbox</a> &gt;&gt; <a href="section_3f66500b7bc388d82439997e800d15a1.html">FOSSEE Signal Processing Toolbox</a> &gt; arburg</span>
+=======
+    <span class="path"><a href="index.html">FOSSEE Signal Processing Toolbox</a> &gt;&gt; <a href="section_e54aa8aac34aa55341e8b4b782fe1a74.html">FOSSEE Signal Processing Toolbox</a> &gt; arburg</span>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 
     <br /><br />
     <div class="refnamediv"><h1 class="refname">arburg</h1>
@@ -49,6 +57,7 @@
       <dd><p class="para">positive integer value &lt; length(x) - 2</p></dd></dt>
    <dt><span class="term">criterion:</span>
       <dd><p class="para">string value, takes in &#0034;AKICc&#0034;, &#0034;KIC&#0034;, &#0034;AICc&#0034;, &#0034;AIC&#0034; and &#0034;FPE&#0034;, default it not using a model-selection criterion</p></dd></dt>
+<<<<<<< HEAD
    <dt><span class="term">a:</span>
       <dd><p class="para">list of autoregression coefficients.</p></dd></dt>
    <dt><span class="term">v:</span>
@@ -65,6 +74,24 @@ The third parameter takes in the criterion to limit the number of poles. The acc
    <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">x</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabdefault">,</span><span class="scilabnumber">5</span><span class="scilabopenclose">]</span> <span class="scilabdefault">;</span>
 <span class="scilabid">poles</span> <span class="scilaboperator">=</span> <span class="scilabnumber">2</span> <span class="scilabdefault">;</span>
 <span class="scilabid">arburg</span><span class="scilabopenclose">(</span><span class="scilabid">x</span><span class="scilabdefault">,</span><span class="scilabid">poles</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+=======
+   <dt><span class="term">a, v, k:</span>
+      <dd><p class="para">Output variables</p></dd></dt></dl></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para">This is an Octave function.</p>
+   <p class="para">This function calculates coefficients of an autoregressive (AR) model of complex data x using the whitening lattice-filter method of Burg.</p>
+   <p class="para">The first argument is the data sampled. The second argument is the number of poles in the model (or limit in case a criterion is supplied).
+The third parameter takes in the criterion to limit the number of poles. The acceptable values are &#0034;AIC&#0034;, &#0034;AKICc&#0034;, &#0034;KIC&#0034;, &#0034;AICc&#0034; which are based on information theory.
+Output variable a is a list of P+1 autoregression coefficients.
+Output variable v is the mean square of residual noise from the whitening operation of the Burg lattice filter.
+Output variable k corresponds to the reflection coefficients defining the lattice-filter embodiment of the model.</p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">arburg</span><span class="scilabopenclose">(</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabdefault">,</span><span class="scilabnumber">5</span><span class="scilabopenclose">]</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span>
+<span class="scilabid">ans</span> <span class="scilaboperator">=</span>
+<span class="scilabnumber">1.00000</span>  <span class="scilaboperator">-</span><span class="scilabnumber">1.86391</span>   <span class="scilabnumber">0.95710</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
     <br />
 
     <div class="manualnavbar">
@@ -76,7 +103,11 @@ The third parameter takes in the criterion to limit the number of poles. The acc
 
       </td>
       <td width="40%" class="center">
+<<<<<<< HEAD
       	<span class="top"><a href="section_3f66500b7bc388d82439997e800d15a1.html">FOSSEE Signal Processing Toolbox</a></span>
+=======
+      	<span class="top"><a href="section_e54aa8aac34aa55341e8b4b782fe1a74.html">FOSSEE Signal Processing Toolbox</a></span>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 
       </td>
       <td width="30%" class="next">

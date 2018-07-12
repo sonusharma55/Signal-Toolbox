@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+function [y, z, opt] = buffer (x, n, p, opt)
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 //This function buffers the given data into a matrix of signal frames
 //Calling Sequence
 //[y] = buffer (x, n)
@@ -17,6 +21,7 @@
 //   0   0
 //   0   1
 //   1   0
+<<<<<<< HEAD
 
 //Older code
 
@@ -207,3 +212,44 @@ function [y, z, opt] = buffer (x, n, p, opt)
     end
   end
 endfunction
+=======
+//This function is being called from Octave
+
+funcprot(0);
+lhs = argn(1)
+rhs = argn(2)
+if (rhs < 2 | rhs > 4)
+error("Wrong number of input arguments.")
+end
+
+select(rhs)
+	
+	case 2 then
+		if(lhs==1)
+		y = callOctave("buffer",x,n)
+		elseif(lhs==3)
+		[y,z,opt] = callOctave("buffer",x,n)
+		else
+		error("Wrong number of output argments.")
+		end
+
+	case 3 then
+		if(lhs==1)
+		y = callOctave("buffer",x,n,p)
+		elseif(lhs==3)
+		[y,z,op] = callOctave("buffer",x,n,p)
+		else
+		error("Wrong number of output argments.")
+	       	end
+	case 4 then
+		if(lhs==1)
+		y = callOctave("buffer",x,n,p,opt)
+		elseif(lhs==3)
+		[y,z,opt] = callOctave("buffer",x,n,p,opt)
+		else
+		error("Wrong number of output argments.")
+	       	end
+	end
+endfunction
+
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d

@@ -17,24 +17,34 @@
 
   <refnamediv>
     <refname>movingrms</refname>
+<<<<<<< HEAD
     <refpurpose>Find moving RMS value of signal in x</refpurpose>
     <para> </para>
+=======
+    <refpurpose></refpurpose>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
   </refnamediv>
 
 
 <refsynopsisdiv>
    <title>Calling Sequence</title>
    <synopsis>
+<<<<<<< HEAD
    [rmsx,w]=movingrms(x,width,risetime)
    [rmsx,w]=movingrms(x,width,risetime,Fs)
    </synopsis>
     <para> </para>
+=======
+   [rmsx,w]=movingrms(x,w,rc,Fs=1)
+   </synopsis>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 </refsynopsisdiv>
 
 <refsection>
    <title>Parameters</title>
    <variablelist>
    <varlistentry><term>x:</term>
+<<<<<<< HEAD
       <listitem><para> (Real or complex valued vector or matrix) Input signal samples</para></listitem></varlistentry>
    <varlistentry><term>width:</term>
       <listitem><para> Real or complex scalar value</para></listitem></varlistentry>
@@ -44,11 +54,22 @@
       <listitem><para> (Real or complex scalar value) Smapling frequency</para></listitem></varlistentry>
    </variablelist>
     <para> </para>
+=======
+      <listitem><para> Real or complex valued vector or matrix</para></listitem></varlistentry>
+   <varlistentry><term>w:</term>
+      <listitem><para> Real or complex scalar value</para></listitem></varlistentry>
+   <varlistentry><term>rc:</term>
+      <listitem><para> Real or complex scalar value</para></listitem></varlistentry>
+   <varlistentry><term>Fs:</term>
+      <listitem><para> Real or complex scalar value</para></listitem></varlistentry>
+   </variablelist>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 </refsection>
 
 <refsection>
    <title>Description</title>
    <para>
+<<<<<<< HEAD
 In this function signal is convoluted against a sigmoid window of width w and risetime rc with the units of these parameters relative to the value of the sampling frequency given in Fs (Default value=1).
 </para>
     <para> </para>
@@ -67,4 +88,26 @@ In this function signal is convoluted against a sigmoid window of width w and ri
    ]]></programlisting>
 </refsection>
 
+=======
+This is an Octave function.
+The signal is convoluted against a sigmoid window of width w and risetime rc with the units of these parameters relative to the value of the sampling frequency given in Fs (Default value=1).
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+1.    [a,b]=movingrms ([4.4 94 1;-2 5i 5],1,-2)
+a =    0.91237   17.71929    0.96254
+0.91237   17.71929    0.96254
+b =   0.18877
+0.18877
+2.    [a,b]=movingrms ([4.4 94 1;-2 5i 5],1,-2,2)
+a =   4.8332   93.8669    5.0990
+4.8332   93.8669    5.0990
+b =   1
+1
+   ]]></programlisting>
+</refsection>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 </refentry>

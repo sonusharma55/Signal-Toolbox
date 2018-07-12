@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //Checks for stability of Discrete time System function
 
 //Description :  A  Discrete time system is stable if all poles of system function are inside unit circle 
@@ -30,6 +31,31 @@
 
 // Conclusion : this system is unstable as flag output is 0
 
+=======
+//isstable True for stable filter
+//  FLAG = ISSTABLE(B,A) returns a logical output, FLAG, equal to TRUE if
+//  the filter specified by numerator coefficients B, and denominator
+//  coefficients A, is stable. Input vectors B, and A define a filter with
+//  transfer function:
+//
+//              jw               -jw              -jmw
+//       jw  B(e)    b(1) + b(2)e + .... + b(m+1)e
+//    H(e) = ---- = ------------------------------------
+//              jw               -jw              -jnw
+//           A(e)    a(1) + a(2)e + .... + a(n+1)e
+//
+//  FLAG = ISSTABLE(SOS) returns TRUE if the filter specified using the
+//  second order sections matrix, SOS, is stable. SOS is a Kx6 matrix,
+//  where the number of sections, K, must be greater than or equal to 2.
+//  Each row of SOS corresponds to the coefficients of a second order
+//  filter. From the transfer function displayed above, the ith row of the
+//  SOS matrix corresponds to [bi(1) bi(2) bi(3) ai(1) ai(2) ai(3)].
+//  Calling Syntax
+//  flag=isstable(b,a);
+//  flag=isstable(sos);
+//Author: Parthasarathi Panda
+//parthasarathipanda314@gmail.com
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 function isstab=isstable(varargin)
 [nargout,nargin]=argn();
 if (nargin==2) then//(a,b) is the input

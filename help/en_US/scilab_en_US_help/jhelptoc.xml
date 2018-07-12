@@ -2,7 +2,11 @@
 <!DOCTYPE toc PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 1.0//EN" "http://java.sun.com/products/javahelp/toc_1_0.dtd">
 <toc version="1.0">
 <tocitem target="index" text="FOSSEE Signal Processing Toolbox">
+<<<<<<< HEAD
 <tocitem target="section_3f66500b7bc388d82439997e800d15a1" text="FOSSEE Signal Processing Toolbox">
+=======
+<tocitem target="section_e54aa8aac34aa55341e8b4b782fe1a74" text="FOSSEE Signal Processing Toolbox">
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 <tocitem target="ac2poly" text="ac2poly"/>
 <tocitem target="ac2rc" text="ac2rc"/>
 <tocitem target="arParEst" text="arParEst"/>
@@ -44,7 +48,10 @@
 <tocitem target="cheby2" text="cheby2"/>
 <tocitem target="check" text="check"/>
 <tocitem target="chirp" text="chirp"/>
+<<<<<<< HEAD
 <tocitem target="circshift" text="circshift"/>
+=======
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 <tocitem target="cl2bp" text="cl2bp"/>
 <tocitem target="clustersegment" text="clustersegment"/>
 <tocitem target="cmorwavf" text="cmorwavf"/>
@@ -63,7 +70,10 @@
 <tocitem target="detrend1" text="detrend1"/>
 <tocitem target="dftmtx" text="dftmtx"/>
 <tocitem target="diffpara" text="diffpara"/>
+<<<<<<< HEAD
 <tocitem target="digitrevorder" text="digitrevorder"/>
+=======
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 <tocitem target="diric" text="diric"/>
 <tocitem target="downsample" text="downsample"/>
 <tocitem target="dst1" text="dst1"/>

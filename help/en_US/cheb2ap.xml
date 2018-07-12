@@ -17,7 +17,11 @@
 
   <refnamediv>
     <refname>cheb2ap</refname>
+<<<<<<< HEAD
     <refpurpose>Produces a lowpass analog Chebyshev type II prototype filter.</refpurpose>
+=======
+    <refpurpose>This function designs a lowpass analog Chebyshev type II filter.</refpurpose>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
   </refnamediv>
 
 
@@ -25,6 +29,11 @@
    <title>Calling Sequence</title>
    <synopsis>
    [z, p, g] = cheb2ap (n, Rs)
+<<<<<<< HEAD
+=======
+   [z, p] = cheb2ap (n, Rs)
+   p = cheb2ap (n, Rs)
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
    </synopsis>
 </refsynopsisdiv>
 
@@ -34,7 +43,11 @@
    <varlistentry><term>n:</term>
       <listitem><para> Filter Order</para></listitem></varlistentry>
    <varlistentry><term>Rs:</term>
+<<<<<<< HEAD
       <listitem><para> Stopband attenuation in dB</para></listitem></varlistentry>
+=======
+      <listitem><para> Stopband attenuation</para></listitem></varlistentry>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
    <varlistentry><term>z:</term>
       <listitem><para> Zeros</para></listitem></varlistentry>
    <varlistentry><term>p:</term>
@@ -47,13 +60,19 @@
 <refsection>
    <title>Description</title>
    <para>
+<<<<<<< HEAD
 This function gives a lowpass analog Chebyshev type II prototpye filter of nth order and with a stopband attenuation of Rs.
+=======
+This is an Octave function.
+This function designs a lowpass analog Chebyshev type II filter of nth order and with a stopband attenuation of Rs.
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 </para>
 </refsection>
 
 <refsection>
    <title>Examples</title>
    <programlisting role="example"><![CDATA[
+<<<<<<< HEAD
 n = 4;
 Rs = 10;
 [z, p, g] = cheb2ap (n, Rs)
@@ -68,4 +87,9 @@ Rs = 10;
     </simplelist>
   </refsection>
 
+=======
+
+   ]]></programlisting>
+</refsection>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 </refentry>

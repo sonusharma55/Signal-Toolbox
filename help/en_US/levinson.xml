@@ -17,6 +17,7 @@
 
   <refnamediv>
     <refname>levinson</refname>
+<<<<<<< HEAD
     <refpurpose>Levinson-Durbin Recurssion Algorithm</refpurpose>
     <para> </para>
   </refnamediv>
@@ -94,4 +95,9 @@ ar = levinson(r,length(a)-1) //coefficients of autoregressive process
 ]]></programlisting>
 </refsection>
 
+=======
+    <refpurpose></refpurpose>
+  </refnamediv>
+
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 </refentry>

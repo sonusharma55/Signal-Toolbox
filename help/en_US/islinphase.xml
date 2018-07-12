@@ -17,6 +17,7 @@
 
   <refnamediv>
     <refname>islinphase</refname>
+<<<<<<< HEAD
     <refpurpose>Checks given system function is linearphase or not</refpurpose>
     <para> </para>
   </refnamediv>
@@ -75,4 +76,9 @@ flag = islinphase(b,a) //This is an example of Symmetric FIR Filter which is Lin
 </refsection>
 
 
+=======
+    <refpurpose>[nargout,nargin]=argn();</refpurpose>
+  </refnamediv>
+
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 </refentry>

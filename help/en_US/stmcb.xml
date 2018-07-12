@@ -17,6 +17,7 @@
 
   <refnamediv>
     <refname>stmcb</refname>
+<<<<<<< HEAD
     <refpurpose>Compute linear model using Steiglitz-McBride iteration</refpurpose>
     <para> </para>
   </refnamediv>
@@ -141,4 +142,9 @@ ylabel "magnitude {h(n)} "
 </scilab:image>
 </refsection>
 
+=======
+    <refpurpose>function [b,a] = stmcb( x, u_in, q, p, niter, a_in )</refpurpose>
+  </refnamediv>
+
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 </refentry>

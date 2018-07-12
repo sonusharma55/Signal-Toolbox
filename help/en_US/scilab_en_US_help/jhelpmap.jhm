@@ -2,7 +2,11 @@
 <!DOCTYPE map PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Map Version 1.0//EN" "http://java.sun.com/products/javahelp/map_1_0.dtd">
 <map version="1.0">
 <mapID target="index" url="index.html"/>
+<<<<<<< HEAD
 <mapID target="section_3f66500b7bc388d82439997e800d15a1" url="section_3f66500b7bc388d82439997e800d15a1.html"/>
+=======
+<mapID target="section_e54aa8aac34aa55341e8b4b782fe1a74" url="section_e54aa8aac34aa55341e8b4b782fe1a74.html"/>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 <mapID target="ac2poly" url="ac2poly.html"/>
 <mapID target="ac2rc" url="ac2rc.html"/>
 <mapID target="arParEst" url="arParEst.html"/>
@@ -44,7 +48,10 @@
 <mapID target="cheby2" url="cheby2.html"/>
 <mapID target="check" url="check.html"/>
 <mapID target="chirp" url="chirp.html"/>
+<<<<<<< HEAD
 <mapID target="circshift" url="circshift.html"/>
+=======
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 <mapID target="cl2bp" url="cl2bp.html"/>
 <mapID target="clustersegment" url="clustersegment.html"/>
 <mapID target="cmorwavf" url="cmorwavf.html"/>
@@ -63,7 +70,10 @@
 <mapID target="detrend1" url="detrend1.html"/>
 <mapID target="dftmtx" url="dftmtx.html"/>
 <mapID target="diffpara" url="diffpara.html"/>
+<<<<<<< HEAD
 <mapID target="digitrevorder" url="digitrevorder.html"/>
+=======
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 <mapID target="diric" url="diric.html"/>
 <mapID target="downsample" url="downsample.html"/>
 <mapID target="dst1" url="dst1.html"/>

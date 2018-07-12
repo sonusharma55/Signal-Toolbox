@@ -25,6 +25,11 @@
    <title>Calling Sequence</title>
    <synopsis>
    [Zz, Zp, Zg] = ncauer(Rp, Rs, n)
+<<<<<<< HEAD
+=======
+   [Zz, Zp] = ncauer(Rp, Rs, n)
+   Zz = ncauer(Rp, Rs, n)
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
    </synopsis>
 </refsynopsisdiv>
 
@@ -34,6 +39,7 @@
    <varlistentry><term>n:</term>
       <listitem><para> Filter Order</para></listitem></varlistentry>
    <varlistentry><term>Rp:</term>
+<<<<<<< HEAD
       <listitem><para> Peak-to-peak passband ripple in dB</para></listitem></varlistentry>
    <varlistentry><term>Rs:</term>
       <listitem><para> Stopband attenuation in dB</para></listitem></varlistentry>
@@ -43,22 +49,34 @@
       <listitem><para> Poles</para></listitem></varlistentry>
    <varlistentry><term>Zg:</term>
       <listitem><para> Gain</para></listitem></varlistentry>
+=======
+      <listitem><para> Peak-to-peak passband ripple</para></listitem></varlistentry>
+   <varlistentry><term>Rs:</term>
+      <listitem><para> Stopband attenuation</para></listitem></varlistentry>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
    </variablelist>
 </refsection>
 
 <refsection>
    <title>Description</title>
    <para>
+<<<<<<< HEAD
 It gives an analog prototype for Cauer filter (elliptic filter) of nth order, with a Peak-to-peak passband ripple of Rp and a stopband attenuation of Rs.
 </para>
 <para>
 This function is same as ellipap() only order of input argument is different,</para>
  <para> This function is only for octave compatibility only </para>
+=======
+This is an Octave function.
+It designs an analog prototype for Cauer filter of nth order, with a Peak-to-peak passband ripple of Rp and a stopband attenuation of Rs.
+</para>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 </refsection>
 
 <refsection>
    <title>Examples</title>
    <programlisting role="example"><![CDATA[
+<<<<<<< HEAD
 n = 4;
 Rp = 3;
 Rs = 10;
@@ -75,4 +93,21 @@ Rs = 10;
     </simplelist>
   </refsection>
 
+=======
+n = 5;
+Rp = 5;
+Rs = 5;
+[Zz, Zp, Zg] = ncauer(Rp, Rs, n)
+Zz =
+
+0.0000 + 2.5546i   0.0000 + 1.6835i  -0.0000 - 2.5546i  -0.0000 - 1.6835i
+
+Zp =
+
+-0.10199 + 0.64039i  -0.03168 + 0.96777i  -0.10199 - 0.64039i  -0.03168 - 0.96777i  -0.14368 + 0.00000i
+
+Zg =  0.0030628
+   ]]></programlisting>
+</refsection>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 </refentry>

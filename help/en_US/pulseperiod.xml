@@ -17,14 +17,19 @@
 
   <refnamediv>
     <refname>pulseperiod</refname>
+<<<<<<< HEAD
     <refpurpose>This function estimate pulse period of real vector x.</refpurpose>
     <para> </para>
+=======
+    <refpurpose></refpurpose>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
   </refnamediv>
 
 
 <refsynopsisdiv>
    <title>Calling Sequence</title>
    <synopsis>
+<<<<<<< HEAD
      p=pulseperiod(x)
      p=pulseperiod(x, Fs)
      p=pulseperiod(x, t)
@@ -99,4 +104,15 @@
 
 </refsection>
 
+=======
+   p=pulseperiod(x)
+   p=pulseperiod(x, Fs)
+   p=pulseperiod(x, t)
+   p=pulseperiod (x, t, 'Polarity', pol)
+   p=pulseperiod(x, t, 'MidPercentReferenceLevel', N )
+   p=pulseperiod(x, t, 'Tolerance', M)
+   p=pulseperiod(x, t,'StateLevels', O)
+   </synopsis>
+</refsynopsisdiv>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 </refentry>

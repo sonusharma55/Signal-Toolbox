@@ -17,6 +17,7 @@
 
   <refnamediv>
     <refname>pulsewidth</refname>
+<<<<<<< HEAD
     <refpurpose>This function estimate pulse width of real vector x.</refpurpose>
     <para> </para>
   </refnamediv>
@@ -98,4 +99,22 @@
 
 </refsection>
 
+=======
+    <refpurpose></refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   w=pulsewidth(x)
+   w=pulsewidth(x, Fs)
+   w=pulsewidth(x, t)
+   w=pulsewidth (x, t, 'Polarity', pol)
+   w=pulsewidth(x, t, 'MidPercentReferenceLevel', N )
+   w=pulsewidth(x, t, 'Tolerance', M)
+   w=pulsewidth(x, t,'StateLevels', O)
+   </synopsis>
+</refsynopsisdiv>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 </refentry>

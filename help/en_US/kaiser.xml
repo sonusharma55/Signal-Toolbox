@@ -53,9 +53,20 @@ The second parameter gives the stop band attenuation of the Fourier transform of
 <refsection>
    <title>Examples</title>
    <programlisting role="example"><![CDATA[
+<<<<<<< HEAD
 L = 6 ;
 beta = 0.2 ;
 kaiser(L, beta)
+=======
+kaiser(6,0.2)
+ans  =
+0.9900745
+0.9964211
+0.9996020
+0.9996020
+0.9964211
+0.9900745
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
    ]]></programlisting>
 </refsection>
 </refentry>

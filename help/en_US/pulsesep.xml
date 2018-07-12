@@ -17,14 +17,19 @@
 
   <refnamediv>
     <refname>pulsesep</refname>
+<<<<<<< HEAD
     <refpurpose>This function estimate pulse  separation between bilevel waveform pulses.</refpurpose>
     <para> </para>
+=======
+    <refpurpose></refpurpose>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
   </refnamediv>
 
 
 <refsynopsisdiv>
    <title>Calling Sequence</title>
    <synopsis>
+<<<<<<< HEAD
      s=pulsesep(x)
      s=pulsesep(x, Fs)
      s=pulsesep(x, t)
@@ -99,4 +104,15 @@
 
 </refsection>
 
+=======
+   s=pulsesep(x)
+   s=pulsesep(x, Fs)
+   s=pulsesep(x, t)
+   s=pulsesep (x, t, 'Polarity', pol)
+   s=pulsesep(x, t, 'MidPercentReferenceLevel', N )
+   s=pulsesep(x, t, 'Tolerance', M)
+   s=pulsesep(x, t,'StateLevels', [O 1])
+   </synopsis>
+</refsynopsisdiv>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 </refentry>

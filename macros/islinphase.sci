@@ -1,5 +1,6 @@
 //islinphase Determine whether filter has linear phase
 
+<<<<<<< HEAD
 // Calling Syntax and Parameter description
 //flag = islinphase(b,a)
 //takes input as numerator and denumerator coefficint matrices and returns flag =1 if filter is linear phase else return flag = 0 
@@ -22,6 +23,15 @@
 //Author: Parthasarathi Panda
 //parthasarathipanda314@gmail.com
 
+=======
+// Calling Syntax
+//flag = islinphase(b,a)
+//flag = islinphase(sos)
+//flag = islinphase(...,tol)
+
+//Author: Parthasarathi Panda
+//parthasarathipanda314@gmail.com
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 function islin=islinphase(varargin)
     [nargout,nargin]=argn();
     if (nargin==2) then

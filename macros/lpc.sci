@@ -29,6 +29,7 @@ function [a,g] = lpc(x,varargin)
     //
     //
     // Examples
+<<<<<<< HEAD
     //noise = rand(50000,1,"normal");
     //x = filter(1,[1 1/2 1/3 1/4],noise);
     //x = x(45904:50000);
@@ -52,6 +53,13 @@ function [a,g] = lpc(x,varargin)
     //    1.    0.51533    0.3313039    0.2783268  
     // 
 
+=======
+    // 1) 
+    //      noise = randn(20000,1);
+    //      x = filter(1,[1 1/5 1/3 1/4],noise);
+    //      x = x(15904:20000);
+    //      [a,g] = lpc(x,3);
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
     //
     //
     // References

@@ -1,4 +1,5 @@
 function y = medfilt1(x, varargin)
+<<<<<<< HEAD
 // 1D median filtering
 //
 // Calling sequence
@@ -68,6 +69,66 @@ function y = medfilt1(x, varargin)
 //
 // Authors
 // Ayush Baid
+=======
+    // 1D median filtering
+    //
+    // Calling sequence
+    // y = medfilt1(x)
+    // y = medfilt1(x, n)
+    // y = medfilt1(x, n, dim)
+    // y = medfitl1(__, nanflag, padding)
+    // 
+    // Description
+    // y = medfilt1(x)
+    //      Applies a 3rd order 1-dimensional median filter to input x along the
+    //      first non-zero dimension. The function appropriately pads the signal
+    //      with zeros at the endings. For a segment, a median is calculated as
+    //      the middle value (average of two middle values) for odd number
+    //      number (even number) of data points.
+    // y = medfilt1(x,n)
+    //      Applies a nth order 1-dimensional median filter.
+    // y = medfilt1(x,n,dim)
+    //      Applies the median filter along the n-th dimension
+    // y = medfilt1(__, nanflag, padding)
+    //      nanflag specifies how NaN values are treated. padding specifies the 
+    //      type of filtering to be performed at the signal edges.
+    //
+    // Parameters
+    // x: int | double
+    //      Input signal.
+    // n: positive integer scalar
+    //      Filter order. 
+    //      Defaults to 3.The order of the median filter. Must be less than 
+    //      (length of the signal) where signals are 1D vectors along the 
+    //      dimension of x to be filtered
+    // dim: positive integer scalar
+    //      Dimension to filter along. 
+    //      Defaults to first non-singleton dimension of x
+    // nanflag: 'includenan' (default) | 'omitnan'
+    //      NaN condition.
+    //      * includenan: Filtering such that the median of any segment
+    //          containing a NaN is also a NaN.
+    //      * omitnan: Filtering with NaNs omitted in each segment. If a segment
+    //          contains all NaNs, the result is NaN
+    // y: int | double
+    //      The filtered signal.
+    //      y has the same size as x
+    //
+    // Examples
+    // 1) Noise supression using median filtering
+    //      fs = 1e3;
+    //      t =  1:1/fs:1;
+    //      s = sin(2*%pi*2*t)+ cos(2*%pi*5*t);
+    //      // Adding noise
+    //      x = s + 0.1*randn(size(s));
+    //      y = medfilt1(x);
+    //
+    // See also
+    // filter | hampel | median | sgolayfilt
+    //
+    // Authors
+    // Ayush Baid
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
     
     
     
@@ -229,7 +290,11 @@ function med = medfilt_colvector(x, n, zeropadflag, nanflag)
     // nanflag -> discard all blocks containing nan, else do not consider nan values
     
     med = zeros(size(x,1),1);
+<<<<<<< HEAD
     //disp('here1');
+=======
+    disp('here1');
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
     
     
     // ** zero pad the signal **
@@ -258,7 +323,11 @@ function med = medfilt_colvector(x, n, zeropadflag, nanflag)
         nanpresent = or(isnan(blocks), 1);
         med(nanpresent) = %nan;
     else
+<<<<<<< HEAD
         //disp('here3');
+=======
+        disp('here3');
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
         // we have to neglect nans
         sorted_blocks = gsort(blocks, 'r', 'i');
         

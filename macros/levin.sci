@@ -13,8 +13,11 @@ function [ar, sigma2,rc] = levin(r);
 //    //  ar     :Auto-Regressive model parameters
 //    //  sigma2 :Scale constant
 //    //  rc     :Reflection coefficients
+<<<<<<< HEAD
 
 // Example : 
+=======
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 if length(r)==1 then
     ar=1;
     sigma2=r;

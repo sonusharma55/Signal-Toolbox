@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //Pole-Zero plot for Discrete time systems
 
 //Calling Sequence
@@ -136,3 +137,21 @@ endfunction
 //
 //endfunction
 
+=======
+function [y] = zplane(z,p)
+funcprot(0);
+
+rhs = argn(2)
+
+if(rhs<1 | rhs>2)
+error("Wrong number of input arguments.")
+end
+	select(rhs)
+	case 1 then
+	callOctave("zplane",z)
+	case 2 then
+	callOctave("zplane",z,p)
+	end
+endfunction
+
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d

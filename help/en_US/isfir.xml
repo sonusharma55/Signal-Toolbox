@@ -17,6 +17,7 @@
 
   <refnamediv>
     <refname>isfir</refname>
+<<<<<<< HEAD
     <refpurpose> Determines whether given system function is FIR or not</refpurpose>
     <para> </para>
   </refnamediv>
@@ -76,3 +77,9 @@ f = isfir(b,a) //This is an example of FIR system function, hence output will be
 </refentry>
 
 
+=======
+    <refpurpose>[nargout,nargin]=argn();</refpurpose>
+  </refnamediv>
+
+</refentry>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d

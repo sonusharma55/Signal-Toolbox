@@ -17,18 +17,27 @@
 
   <refnamediv>
     <refname>bitrevorder</refname>
+<<<<<<< HEAD
     <refpurpose> Returns input data in bit-reversed order </refpurpose>
     <para> </para>
+=======
+    <refpurpose></refpurpose>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
   </refnamediv>
 
 
 <refsynopsisdiv>
    <title>Calling Sequence</title>
    <synopsis>
+<<<<<<< HEAD
    [y,i] = bitrevorder(x)
    y = bitrevorder(x)
    </synopsis>
     <para> </para>
+=======
+   [y,i]=bitrevorder(x)
+   </synopsis>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 </refsynopsisdiv>
 
 <refsection>
@@ -36,17 +45,24 @@
    <variablelist>
    <varlistentry><term>x:</term>
       <listitem><para> Vector of real or complex values</para></listitem></varlistentry>
+<<<<<<< HEAD
    <varlistentry><term>y:</term>
       <listitem><para> input vector in bit reverse order</para></listitem></varlistentry>
    <varlistentry><term>i:</term>
       <listitem><para> indices after bit reversing </para></listitem></varlistentry>
     <para> </para>
+=======
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
    </variablelist>
 </refsection>
 
 <refsection>
    <title>Description</title>
    <para>
+<<<<<<< HEAD
+=======
+This is an Octave function.
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 This function returns the input data after reversing the bits of the indices and reordering the elements of the input array.
 </para>
 </refsection>
@@ -54,8 +70,16 @@ This function returns the input data after reversing the bits of the indices and
 <refsection>
    <title>Examples</title>
    <programlisting role="example"><![CDATA[
+<<<<<<< HEAD
 x = [%i,1,3,6*%i] ;
 [y i]=bitrevorder(x)
+=======
+1.    [y]=bitrevorder ([i,1,3,6i])
+y =   [0 + 1i   3 + 0i   1 + 0i   0 + 6i]
+2.    [y,i]=bitrevorder (['a','b','c','d'])
+y = acbd
+i =   [1   3   2   4]
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
    ]]></programlisting>
 </refsection>
 </refentry>

@@ -17,7 +17,11 @@
 
   <refnamediv>
     <refname>ellipap</refname>
+<<<<<<< HEAD
     <refpurpose>Produces a lowpass analog elliptic prototype filter.</refpurpose>
+=======
+    <refpurpose>Designs a lowpass analog elliptic filter.</refpurpose>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
   </refnamediv>
 
 
@@ -25,6 +29,11 @@
    <title>Calling Sequence</title>
    <synopsis>
    [z, p, g] = ellipap (n, Rp, Rs)
+<<<<<<< HEAD
+=======
+   [z, p] = ellipap (n, Rp, Rs)
+   z = ellipap (n, Rp, Rs)
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
    </synopsis>
 </refsynopsisdiv>
 
@@ -34,6 +43,7 @@
    <varlistentry><term>n:</term>
       <listitem><para> Filter Order</para></listitem></varlistentry>
    <varlistentry><term>Rp:</term>
+<<<<<<< HEAD
       <listitem><para> Peak-to-peak passband ripple in dB</para></listitem></varlistentry>
    <varlistentry><term>Rs:</term>
       <listitem><para> Stopband attenuation in dB</para></listitem></varlistentry>
@@ -43,19 +53,30 @@
       <listitem><para> Poles</para></listitem></varlistentry>
    <varlistentry><term>g:</term>
       <listitem><para> Gain</para></listitem></varlistentry>
+=======
+      <listitem><para> Peak-to-peak passband ripple</para></listitem></varlistentry>
+   <varlistentry><term>Rs:</term>
+      <listitem><para> Stopband attenuation</para></listitem></varlistentry>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
    </variablelist>
 </refsection>
 
 <refsection>
    <title>Description</title>
    <para>
+<<<<<<< HEAD
 It gives a lowpass analog elliptic prototype filter of nth order, with a Peak-to-peak passband ripple of Rp dB and a stopband attenuation of Rs dB.
+=======
+This is an Octave function.
+It designs a lowpass analog elliptic filter of nth order, with a Peak-to-peak passband ripple of Rp and a stopband attenuation of Rs.
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 </para>
 </refsection>
 
 <refsection>
    <title>Examples</title>
    <programlisting role="example"><![CDATA[
+<<<<<<< HEAD
 n = 4;
 Rp = 3;
 Rs = 10;
@@ -71,4 +92,18 @@ Rs = 10;
     </simplelist>
   </refsection>
 
+=======
+[z, p, g] = ellipap (5, 10, 10)
+z =
+
+0.0000 + 2.5546i   0.0000 + 1.6835i  -0.0000 - 2.5546i  -0.0000 - 1.6835i
+
+p =
+
+-0.05243 + 0.63524i  -0.01633 + 0.96289i  -0.05243 - 0.63524i  -0.01633 - 0.96289i  -0.07369 + 0.00000i
+
+g =  0.0015012
+   ]]></programlisting>
+</refsection>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 </refentry>

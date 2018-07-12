@@ -37,18 +37,31 @@
    <varlistentry><term>p:</term>
       <listitem><para> Poles</para></listitem></varlistentry>
    <varlistentry><term>k:</term>
+<<<<<<< HEAD
       <listitem><para> Leading coefficient (Gain)</para></listitem></varlistentry>
    <varlistentry><term>Num:</term>
       <listitem><para> Numerator coefficients of the transfer function</para></listitem></varlistentry>
    <varlistentry><term>den:</term>
       <listitem><para> Denomenator coefficients of the transfer function</para></listitem></varlistentry>
+=======
+      <listitem><para> Leading coefficient</para></listitem></varlistentry>
+   <varlistentry><term>Num:</term>
+      <listitem><para> Numerator of the transfer function</para></listitem></varlistentry>
+   <varlistentry><term>den:</term>
+      <listitem><para> Denomenator of the transfer function</para></listitem></varlistentry>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
    </variablelist>
 </refsection>
 
 <refsection>
    <title>Description</title>
    <para>
+<<<<<<< HEAD
 It converts zeros / poles representation to  transfer function representation.
+=======
+This is an Octave function.
+It converts zeros / poles to a transfer function.
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 </para>
 </refsection>
 
@@ -59,6 +72,7 @@ z = [1 2 3]
 p = [4 5 6]
 k = 5
 [num, den] = zp2tf (z, p, k)
+<<<<<<< HEAD
 
    ]]></programlisting>
 </refsection>
@@ -71,4 +85,15 @@ k = 5
   </refsection>
 
 
+=======
+num =
+
+5  -30   55  -30
+
+den =
+
+1   -15    74  -120
+   ]]></programlisting>
+</refsection>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 </refentry>

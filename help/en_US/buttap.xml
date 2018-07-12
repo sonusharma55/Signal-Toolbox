@@ -17,13 +17,22 @@
 
   <refnamediv>
     <refname>buttap</refname>
+<<<<<<< HEAD
     <refpurpose>Produces a lowpass analog prototype Butterworth filter.</refpurpose>
+=======
+    <refpurpose>Design a lowpass analog Butterworth filter.</refpurpose>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
   </refnamediv>
 
 
 <refsynopsisdiv>
    <title>Calling Sequence</title>
    <synopsis>
+<<<<<<< HEAD
+=======
+   z = buttap (n)
+   [z, p] = buttap (n)
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
    [z, p, g] = buttap (n)
    </synopsis>
 </refsynopsisdiv>
@@ -45,13 +54,19 @@
 <refsection>
    <title>Description</title>
    <para>
+<<<<<<< HEAD
 It gives a lowpass analog prototype Butterworth filter of nth order.
+=======
+This is an Octave function.
+It designs a lowpass analog Butterworth filter of nth order.
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 </para>
 </refsection>
 
 <refsection>
    <title>Examples</title>
    <programlisting role="example"><![CDATA[
+<<<<<<< HEAD
 n = 5 ;
 [z, p, g] = buttap (n)
    ]]></programlisting>
@@ -64,4 +79,15 @@ n = 5 ;
 	    </simplelist>
   </refsection>
 
+=======
+[z, p, g] = buttap (5)
+z = [](0x0)
+p =
+
+-0.30902 + 0.95106i  -0.80902 + 0.58779i  -1.00000 + 0.00000i  -0.80902 - 0.58779i  -0.30902 - 0.95106i
+
+g =  1
+   ]]></programlisting>
+</refsection>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 </refentry>

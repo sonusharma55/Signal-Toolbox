@@ -17,6 +17,7 @@
 
   <refnamediv>
     <refname>tf2zp</refname>
+<<<<<<< HEAD
     <refpurpose>Transfer function to zero pole conversion</refpurpose>
   </refnamediv>
 
@@ -69,4 +70,9 @@ a = [4 5 6]
   </refsection>
 
 
+=======
+    <refpurpose>[z,p,k]= tf2zp(b,a);</refpurpose>
+  </refnamediv>
+
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 </refentry>

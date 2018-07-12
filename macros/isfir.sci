@@ -1,5 +1,6 @@
 //Author: Parthasarathi Panda
 //parthasarathipanda314@gmail.com
+<<<<<<< HEAD
 
 // This function checks whether given system function is FIR or not
 
@@ -31,6 +32,11 @@ function fir=isfir(varargin)
     [nargout,nargin]=argn();
 // checking for input in terms of numerator (b) and denumerator (a) coefficient matrices
     if (nargin==2) then 
+=======
+function fir=isfir(varargin)
+    [nargout,nargin]=argn();
+    if (nargin==2) then
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
         a=varargin(1);
         b=varargin(2);
         if type(a)~=1 | type(b)~=1 then
@@ -57,7 +63,10 @@ function fir=isfir(varargin)
         elseif n~=1 then
             error('check input dimension');
         end
+<<<<<<< HEAD
 //Checking for input in terms of second orer split (sos) matrix
+=======
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
     elseif (nargin==1) then
         sos=varargin(1);
         if type(sos)~=1 then

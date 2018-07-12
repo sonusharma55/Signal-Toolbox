@@ -1,22 +1,34 @@
 function  [y, h] = resample( x, p, q, h )
 //This function resamples in the input sequence x supplied by a factor of p/q.
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 //Calling Sequence
 //y = resample(x, p, q)
 //y = resample(x, p, q, h)
 //[y, h] = resample(...)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 //Parameters 
 //x: scalar, vector or matrix of real or complex numbers
 //p: positive integer value
 //q: positive integer value
 //h: scalar, vector or matrix of real or complex numbers
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 //Description
 //This is an Octave function.
 //This function resamples in the input sequence x supplied by a factor of p/q. If x is a matrix, then every column is resampled.hange the sample rate of x by a factor of p/q. 
 //This is performed using a polyphase algorithm. The impulse response h, given as parameter 4, of the antialiasing filter is either specified or designed with a Kaiser-windowed sinecard. 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 //Examples
 //resample(1,2,3)
 //ans =  0.66667
@@ -45,6 +57,7 @@ end
 endfunction
 
 
+<<<<<<< HEAD
 //**************************************************************************************************
 //Tried to impement without callOctave but fot this it requires ufirdn function which implemented in .cc file in octave, simple implementation of upfirdn doesn't work for resample function
 //**************************************************************************************************
@@ -157,3 +170,6 @@ endfunction
 //  end
 //
 //endfunctio
+=======
+
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d

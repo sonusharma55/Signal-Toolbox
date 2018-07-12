@@ -16,7 +16,11 @@
 
       </td>
       <td width="40%" class="center">
+<<<<<<< HEAD
       	<span class="top"><a href="section_3f66500b7bc388d82439997e800d15a1.html">FOSSEE Signal Processing Toolbox</a></span>
+=======
+      	<span class="top"><a href="section_e54aa8aac34aa55341e8b4b782fe1a74.html">FOSSEE Signal Processing Toolbox</a></span>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 
       </td>
       <td width="30%" class="next">
@@ -29,21 +33,34 @@
 
 
 
+<<<<<<< HEAD
     <span class="path"><a href="index.html">FOSSEE Signal Processing Toolbox</a> &gt;&gt; <a href="section_3f66500b7bc388d82439997e800d15a1.html">FOSSEE Signal Processing Toolbox</a> &gt; besselap</span>
 
     <br /><br />
     <div class="refnamediv"><h1 class="refname">besselap</h1>
     <p class="refpurpose">Bessel analog filter prototype.</p></div>
+=======
+    <span class="path"><a href="index.html">FOSSEE Signal Processing Toolbox</a> &gt;&gt; <a href="section_e54aa8aac34aa55341e8b4b782fe1a74.html">FOSSEE Signal Processing Toolbox</a> &gt; besselap</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">besselap</h1>
+    <p class="refpurpose">Return bessel analog filter prototype.</p></div>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 
 
 <div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
    <div class="synopsis"><pre><span class="default">[</span><span class="default">zero</span><span class="default">, </span><span class="default">pole</span><span class="default">, </span><span class="default">gain</span><span class="default">] = </span><span class="functionid">besselap</span><span class="default"> (</span><span class="default">n</span><span class="default">)</span>
+<<<<<<< HEAD
+=======
+<span class="default">[</span><span class="default">zero</span><span class="default">, </span><span class="default">pole</span><span class="default">] = </span><span class="functionid">besselap</span><span class="default"> (</span><span class="default">n</span><span class="default">)</span>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 <span class="default">zero</span><span class="default"> = </span><span class="functionid">besselap</span><span class="default"> (</span><span class="default">n</span><span class="default">)</span></pre></div></div>
 
 <div class="refsection"><h3 class="title">Parameters</h3>
    <dl><dt><span class="term">n:</span>
       <dd><p class="para">Filter Order</p></dd></dt>
    <dt><span class="term">zero:</span>
+<<<<<<< HEAD
       <dd><p class="para">Zeros of filter</p></dd></dt>
    <dt><span class="term">pole:</span>
       <dd><p class="para">Poles of filter</p></dd></dt>
@@ -62,6 +79,30 @@
 
 <h3 class="title">Modified by :</h3>
 <ul class="itemizedlist"><li class="member">Sonu Sharma, RGIT Mumbai (fellow at FOSSEE, IIT Bombay)</li></ul></div>
+=======
+      <dd><p class="para">Zeros</p></dd></dt>
+   <dt><span class="term">pole:</span>
+      <dd><p class="para">Poles</p></dd></dt>
+   <dt><span class="term">gain:</span>
+      <dd><p class="para">Gain</p></dd></dt></dl></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para">This is an Octave function.
+It Return bessel analog filter prototype of nth order.</p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabopenclose">[</span><span class="scilabid">zero</span><span class="scilabdefault">,</span> <span class="scilabid">pole</span><span class="scilabdefault">,</span> <span class="scilabid">gain</span><span class="scilabopenclose">]</span> <span class="scilaboperator">=</span> <span class="scilabid">besselap</span> <span class="scilabopenclose">(</span><span class="scilabnumber">5</span><span class="scilabopenclose">)</span>
+<span class="scilabid">zero</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabopenclose">]</span><span class="scilabopenclose">(</span><span class="scilabnumber">0</span><span class="scilabid">x0</span><span class="scilabopenclose">)</span>
+<span class="scilabid">pole</span> <span class="scilaboperator">=</span>
+
+<span class="scilaboperator">-</span><span class="scilabnumber">0.59058</span> <span class="scilaboperator">+</span> <span class="scilabnumber">0.90721</span><span class="scilabid">i</span>
+<span class="scilaboperator">-</span><span class="scilabnumber">0.59058</span> <span class="scilaboperator">-</span> <span class="scilabnumber">0.90721</span><span class="scilabid">i</span>
+<span class="scilaboperator">-</span><span class="scilabnumber">0.92644</span> <span class="scilaboperator">+</span> <span class="scilabnumber">0.00000</span><span class="scilabid">i</span>
+<span class="scilaboperator">-</span><span class="scilabnumber">0.85155</span> <span class="scilaboperator">+</span> <span class="scilabnumber">0.44272</span><span class="scilabid">i</span>
+<span class="scilaboperator">-</span><span class="scilabnumber">0.85155</span> <span class="scilaboperator">-</span> <span class="scilabnumber">0.44272</span><span class="scilabid">i</span>
+
+<span class="scilabid">gain</span> <span class="scilaboperator">=</span>  <span class="scilabnumber">1</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
     <br />
 
     <div class="manualnavbar">
@@ -73,7 +114,11 @@
 
       </td>
       <td width="40%" class="center">
+<<<<<<< HEAD
       	<span class="top"><a href="section_3f66500b7bc388d82439997e800d15a1.html">FOSSEE Signal Processing Toolbox</a></span>
+=======
+      	<span class="top"><a href="section_e54aa8aac34aa55341e8b4b782fe1a74.html">FOSSEE Signal Processing Toolbox</a></span>
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 
       </td>
       <td width="30%" class="next">

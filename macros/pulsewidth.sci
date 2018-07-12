@@ -1,7 +1,10 @@
 function [w, initialcross, finalcross, midreference]=pulsewidth(x, varargin)
     
      // This function estimate pulse width of real vector X.
+<<<<<<< HEAD
      
+=======
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
     // Calling Sequence
     // w=pulsewidth(x)
     // w=pulsewidth(x, Fs)
@@ -35,6 +38,7 @@ function [w, initialcross, finalcross, midreference]=pulsewidth(x, varargin)
     // midreference: return mid reference value corrosponding to mid percenr reference value.
     
     // Examples
+<<<<<<< HEAD
     //x = fscanfMat("macros/pulsedata_x.txt");
     //t = fscanfMat("macros/pulsedata_t.txt");
     //clf
@@ -47,6 +51,11 @@ function [w, initialcross, finalcross, midreference]=pulsewidth(x, varargin)
     // it also generates a pulse with pulse width  and annotations
     
     
+=======
+    // x=[1.2, 5, 10, -20, 12]
+    //t=1:length(x)
+    //w=pulsewidth(x, t) 
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
     // See also
     // Authors
     // Jitendra Singh
@@ -372,7 +381,11 @@ midreference=midref; // return midreference value
      ylabel("Level (Volts)", "fontsize",3, "color", "black" )  
        
 
+<<<<<<< HEAD
      legends(["pulsewidth"; "Signal";  "mid cross"; "upper boundary"; "upper state"; "lower boundary";  "mid reference"; "upper boundary"; "lower state"; "lower boundary"],  [[-11; 2] , [1;1], [-10;3], [5;2], [1;2], [5;2], [5;1], [3;2],[1;2], [3;2]], 1)
+=======
+     legends(["pulsewidth"; "Signal";  "mid cross"; "upper boundary"; "upper state"; "lower boundary";  "mid reference"; "upper boundary"; "lower state"; "lower boundary"],  [[-11; 2] , [1;1], [-10;3], [5;2], [1;2], [5;2], [5;1], [3;2],[1;2], [3;2]], opt='?')
+>>>>>>> 6bbb00d0f0128381ee95194cf7d008fb6504de7d
 
    end    
    end  
